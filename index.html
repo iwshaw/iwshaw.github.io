@@ -1,0 +1,95 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Cyber Quest 2019 Coming Soon</title>
+  <link rel="stylesheet" type="text/css" href="comingsoon.css" />
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>
+  <script type="text/javascript">
+
+// I see you are curious!
+
+// You should definitely come to Cyber Quest 2019 :)
+
+$( init );
+
+function init() {
+    
+// background animation
+  $(function() {
+
+	function getChar() {
+		return (Math.floor(Math.random()*16)).toString(16);
+	}
+
+	var char_width = 14;
+
+	var tick = 0;
+
+	function draw() {
+		tick++;
+
+		var width = window.innerWidth / 8;
+		var height = window.innerHeight / 16;
+		if ( tick % 8 != 0 ) {
+			window.requestAnimationFrame( draw );
+			return;
+		}
+
+		var out = '';
+
+		var x, y;
+		for ( y = 0; y < height+30; y ++ ) {
+			for ( x = 0; x < width+30; x++ ) {
+				out += getChar();
+			}
+			out += '<br/>';
+		}
+ 
+		$('.bg').html( out );
+
+		window.requestAnimationFrame( draw );
+		
+	}
+
+	$(window).resize( function() {
+		tick = 0;
+	} );
+
+
+	draw();
+})
+
+}
+
+</script>
+
+</head>
+<body>
+<span class="bg"></span>
+<div class="above"><img class="center" alt="Cyber Quest" src="cyberquest.png" /></div>
+
+<div class="glitch-img">
+<p>
+	<span id="0">C</span><span id="1">O</span><span id="2">M</span><span id="3">I</span><span id="4">N</span><span id="5">G</span><span id="6"> </span><span id="7">S</span><span id="8">O</span><span id="9">O</span><span id="10">N</span> 2019
+</p>
+</div>
+  <script src="mgGlitch.min.js"></script>
+  <script src="comingsoon.js"></script>
+    <script>
+	    $( function() {
+		  $( ".glitch-img" ).mgGlitch({
+			destroy : false, // set 'true' to stop the plugin
+                        glitch: true, // set 'false' to stop glitching
+                        scale: true, // set 'false' to stop scaling
+                        blend : true, // set 'false' to stop glitch blending
+                        blendModeType : 'hue', // select blend mode type
+                        glitch1TimeMin : 150, // set min time for glitch 1 elem
+                        glitch1TimeMax : 225, // set max time for glitch 1 elem
+                        glitch2TimeMin : 10, // set min time for glitch 2 elem
+                        glitch2TimeMax : 115, // set max time for glitch 2 elem
+		  });
+	    });
+	</script>
+</body>
+</html>
