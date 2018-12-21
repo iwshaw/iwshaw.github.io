@@ -1,1 +1,25 @@
-cyberquest.info
+Hi Jennifer
+
+A couple of things for your inbox.
+
+Here is my first attempt at a cubesat activity, you can try in at https://makecode.microbit.org/#editor or with two microbits.
+
+Button A+B captures data.
+Button A views all data captured (weather, radiation etc)
+Button ‘shake’ sends data
+Button B puts the cubesat in ‘receive’ mode
+
+You’ll need to shake it once to bring up a second microbit if you’re on the site. It won’t capture the data sent in that transaction as it is not in receive mode by default – this is so the cubesats act like an ad-hoc network. A better interaction might be to have turning the microbit face up enters receive mode, turning it face down enters send, so one ‘pours’ data onto the other. In terms of interactivity, the group could be split in two, and one group captures and shares data all the time (bittorrent method), while the other has one nominated cubesat which gathers no data itself, only collects from other cubesats (data mule method), and see who gets all the data back to ground control first. But this is maybe overcomplicating it.
+
+Anyway, let me know if you want any of the animations or behaviour changed.
+
+About IoT, I saw this on boingboing:
+https://boingboing.net/2018/12/05/trustable-tech.html
+
+On the site they said Dundee Uni was a partner which led me here:
+https://opendott.org/contacts/
+
+The prof is a Mozilla fellow in Dundee half the year, the lecturer does some interesting stuff http://www.nick-taylor.co.uk/research/ might be helpful.
+
+Sorry if you get this twice. My email has been playing up a bit.
+Ian
