@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
+NEW_WALLPAPER_LOCATION=/usr/share/backgrounds/wallpaper.png
 
 # fetch a new wallpaper
-wget -q http://iwshaw.github.io/updates/wallpaper.png -O /usr/share/backgrounds/wallpaper.png
+sudo wget -q http://iwshaw.github.io/updates/wallpaper.png -O $NEW_WALLPAPER_LOCATION
 
-# switch wallpapers
-dconf write /org/mate/desktop/background/picture-filename "'/usr/share/backgrounds/wallpaper.png'"
+# set wallpaper rendering
+# options: wallpaper zoom centered scaled stretched spanned
+dconf write /org/mate/desktop/background/picture-options "'centered'"
+
+# set the background colour
+dconf write /org/mate/desktop/background/primary-color "'rgb(0,0,0)'"
+
+# change the wallpaper image
+dconf write /org/mate/desktop/background/picture-filename "'$NEW_WALLPAPER_LOCATION'"
