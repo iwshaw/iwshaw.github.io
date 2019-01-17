@@ -24,8 +24,11 @@ dconf write /org/mate/desktop/background/picture-filename "'$NEW_WALLPAPER_LOCAT
 # change the gtk theme
 dconf write /org/mate/desktop/interface/gtk-theme "'Adwaita-dark'"
 
-#change the icon theme
+# change the icon theme
 dconf write /org/mate/desktop/interface/icon-theme "'maia'"
+
+# change the window border theme
+dconf write /org/mate/marco/general/theme "'Blue-Submarine'"
 
 # send the all done message
 notify-send -i /usr/share/icons/mate/256x256/emotes/face-laugh.png -t 3000 "Thank you for your co-operation!"
