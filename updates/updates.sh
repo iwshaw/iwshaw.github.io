@@ -3,10 +3,13 @@
 NEW_WALLPAPER_LOCATION=/usr/share/backgrounds/wallpaper.png
 
 # send the update message
-notify-send -i /usr/share/icons/mate/256x256/status/software-update-urgent.png "Updating Cyber Quest Hacker Mode"
+notify-send -i /usr/share/icons/mate/256x256/status/software-update-urgent.png -t 4500 "Updating Cyber Quest Hacker Mode"
 
 # fetch a new wallpaper
 sudo wget -q http://iwshaw.github.io/updates/wallpaper.png -O $NEW_WALLPAPER_LOCATION
+
+# give it a moment to download
+sleep 5
 
 # set wallpaper rendering
 # options: wallpaper zoom centered scaled stretched spanned
