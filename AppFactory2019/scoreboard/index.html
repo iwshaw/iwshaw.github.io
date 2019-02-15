@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>App Factory</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-sketch theme-color-sky-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="f8d21bd20ad6056516f8babda7536eb6"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="9c6519bb1cd0e5b60e02d5087b70e56e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; font-size: 120%;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 117px;" data-block-id="dae0c40e83282b0f85a881d0294eeb29"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="dc0d9955d0dfde09b041b326814ef939"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">It would be good if the game kept score, and declared an overall winner - first to five, say.</h3>
+
+<h3 style="text-align:left">On the designer tab, we will need a label to tell the player the scores.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 611px; height: 313px; left: 349px; top: 350px;" data-block-id="b94f6f91fa298f69b56cf38b1485e44f"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="631" data-natural-height="323" data-lazy-loaded="" data-src="deck/8202b3a96aea4bd7979904364de41c3f.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 335px; left: 0px; top: 350px;" data-block-id="6c7b70d07cd270c31003e01332b4eb4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 70%;">
+<h3 style="text-align:left">Drag over a label and put it below the result. Rename it something like ‘scoreboard’ and style it how you like.</h3>
+
+<p> </p>
+
+<h3 style="text-align:left">We will also need some way to reset the scores and play again. Drag over a button, rename it, and style it.</h3>
+</div></div></section><section data-id="21f3fa304622d0c0bc02ec3a150698a4"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="d815de3b6289f08ce3ab090159eea8ec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 0px;" data-block-id="c6384b1255c535740d37563a54985cec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="ef8ba5827e7a8375e9a965cf9a941991"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>In the blocks editor, we will need to do a few things.</h3>
+
+<p> </p>
+
+<ul>
+	<li>
+	<h3>First of all we will need to keep track of how many games the player has won, and how many the computer has won.</h3>
+	</li>
+	<li>
+	<h3>
+<span style="color:#000000">Next </span>we will have to manage these totals, adding to them according to who won.</h3>
+	</li>
+	<li>
+	<h3>We will have to check if the winner of a game has enough points to win overall, and if so, declare them the winner, and end the game.</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Finally we will have to handle the reset button.</h3>
+	</li>
+</ul>
+</div></div></section><section class="stack" data-id="2e445f279507039874495e454c5edb9b"><section data-id="d96c983515e3478f519732ad5baddfd8"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="17064dfee7afc92adf319136de37301c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="8162c359f17da6b32bf9a3b68b51cbfc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="82eb7e6e15218036813e2518d55f29ca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">Let’s start by creating some global variables.</h3>
+
+<p> </p>
+
+<h3 style="text-align:left">You'll need to remember the Player Score and Computer Score, and know what the Winning Total is.</h3>
+
+<p> </p>
+
+<h3 style="text-align: left;">Try it now! Go DOWN to check your work.</h3>
+</div></div></section><section data-id="6feb7bf686d097927d5f27b03c42174e"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="3ad00594cf9c7c6aeb8af3907b741972"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="2920744634648d6b9a877b1e9289521f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;" data-block-id="be504c3deeee617e1e8eea1216d87b2b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">Make PlayerScore, ComputerScore and WinningTotal variables.</h3>
+
+<p> </p>
+
+<h3 style="text-align:left">Set the first two to zero, and WinningTotal to five - this will be the number of games needed to win overall.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 568px; height: 114px; left: 196px; top: 420px;" data-block-id="a13863004a4045e8aefffaca45c9b50d"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="568" data-natural-height="114" data-lazy-loaded="" data-src="deck/136627a40b30ae11de0c77da2fa46d87.png"></div></div></section></section><section class="stack" data-id="6d0a32b7358f2a3b29e3ccf403beae97"><section data-id="0f574d83db872b4697cab76ed2b77d66"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="932282c8ae22a8bbee1b8776177d6080"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="c4e1a5765dab10895fb8cf24925f05c0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 0px; top: 210px;" data-block-id="505cf62df3a64100edf3c4034c8bf70c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">We’re going to need to do some coding for when someone wins.</h3>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left">Take a look at the findWinner procedure. Where will you add code? What will it do?</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 458px; height: 490px; left: 502px; top: 210px;" data-block-id="6b7a7016edee8e6cca0beb606471d510"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="531" data-natural-height="568" data-lazy-loaded="" data-src="deck/30b5920e4125886d2198a02d51260a8c.png"></div></div></section><section data-id="84f47a53fedd00cf86bd67e8c929b92a"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="da3fd1b35aa4b0505be4c4f0f338b223"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="f9741abb014821ccf14ecbba65f30904"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="5a6fa7d48991f2599f1986285603bf35"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">Looking at the findWinner code, all we are doing is changing the text in result, and we do it three times for each player in exactly the same way – we don’t care how the winner won, just who it was.</h3>
+
+<p> </p>
+
+<h3 style="text-align:left">It would be better to not have to repeat all that for more than one instruction so let’s use a procedure so we don’t have to repeat ourselves, and can easily make changes later.</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 498px;" data-block-id="832447de0efaaa785a8e598c23c2d356"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 70%; text-align: left;">
+<h3 style="text-align:left">See if you can add a procedure for the player winning, and another for the computer winning. How can you make sure the procedures run?</h3>
+</div></div></section><section data-id="cdb9cab4a92fd24a1a8d0457771779db"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="19e4b47e915046eae6f64720d1e9029e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="545ee71161dade825b436e7bcd929f91"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 582px; left: 0px; top: 192px;" data-block-id="1643b6c634accc4701a6ad0ad1866b09"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<ul>
+	<li>
+	<h3 style="text-align:left">Drag out the first ‘set result.Text to “Player wins”’ block from the findWinner procedure.</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Open the Procedures drawer and drag out a ‘to procedure do’ from the top.</h3>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 378px; height: 141px; left: 582px; top: 192px;" data-block-id="8ef562b2911e85f19436000269da9589"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="378" data-natural-height="141" data-lazy-loaded="" data-src="deck/5bee6f5632b251bdc028f16530fbaed8.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 277px; height: 351px; left: 0px; top: 348px;" data-block-id="a32660cd19d46e8c497e0b2d89ec2bfa"><div class="sl-block-content" style="z-index: 15; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="315" data-natural-height="399" data-lazy-loaded="" data-src="deck/0d1404539909bfc18106fa222da9d5fe.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 669px; left: 291px; top: 348px;" data-block-id="952b8d0279c1560066da0c6ffc2a8d67"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 70%;">
+<ul>
+	<li>
+	<h3 style="text-align:left">Attach the set result block to the procedure and rename it playerWins.</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Now go back to the procedures drawer – you will find a ‘call playerWins’ block. Drag it out and attach it to the place you took the ‘set result’ block from.</h3>
+	</li>
+</ul>
+
+<h3 style="text-align:left">The game should work the same – try it out.</h3>
+</div></div></section></section><section class="stack" data-id="d9d375cc780860615a2e79b01458affe"><section data-id="3b6dc27e91a480c3bdb6b0007493664a"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="bd1a9c3213d01ab53debfdf56ad2f640"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="6ba51f71063851f52ae7aefff1c234ca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="8af6ae45e6762879d6ce23ebd545da7d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">All we are doing is calling (jumping) to the playerWins block, then jumping back. So we can replace the other two instances of ‘set result.Text to “Player Wins”’ with ‘call playerWins’ blocks as well.</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 587px;" data-block-id="15e7509e593e4e2e5123874516134db8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%; text-align: left;">
+<h3>Now we can add more features to a win. Use the Variables and Math drawers to build a block statement that adds one to the global PlayerScore.</h3>
+
+<h3>Go DOWN to check your work.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 488px; height: 215px; left: 236px; top: 345px;" data-block-id="2445a96545467cd559f1f7beb60bb3f6"><div class="sl-block-content" style="z-index: 15; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="567" data-natural-height="249" data-lazy-loaded="" data-src="deck/d11ec4c0869c444e251cb47e7a89478c.png"></div></div></section><section data-id="7f349f5c05a74c21e2792d7016635bed"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="5eae7f0ab8e1f9b01876364646f8e931"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="bca15c83c6a9a5c6defb7fdaa1cbefe1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 571px; height: 217px; left: 195px; top: 273px;" data-block-id="fded2e0a1e4503d411051376fba6dd44"><div class="sl-block-content" style="z-index: 13; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="571" data-natural-height="217" data-lazy-loaded="" data-src="deck/f445e6fc69343d39fc3b6a7c7fa66a4a.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="368035f5610740bbad4f801e8488750b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%;">
+<h3 style="text-align:left">Your blocks should look something like this.</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 804px; left: 0px; top: 516px;" data-block-id="370b926f983d4eac77a8c8ba5a572459"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 70%; border-width: 1px; text-align: left;">
+<h3>We should also check for the win – use an if…then block from Control. If the player’s overall score is equal to the winning total, then they have won overall, so then set the scoreboard text to something suitable like “Player wins the game”.</h3>
+
+<h3>Go DOWN again to check.</h3>
+</div></div></section><section data-id="f2c4d4d486e53f994633de0385b8a8c3"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="172a0e1e195890cd78b62a964f075682"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="1be8655ac6277514cee6b712460555e9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="8b5340a02b135c58a8f4df07ea807eb4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">Your blocks should look something like this.</h3>
+
+<p> </p>
+
+<h3 style="text-align: left;">Try it out on the phone! Does everything still work?</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 569px; height: 368px; left: 196px; top: 332px;" data-block-id="0d5ba67dff7a363564955aaa2219aa4e"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="569" data-natural-height="368" data-lazy-loaded="" data-src="deck/2f6d998f6f27426f275b2e2b96b767ef.png"></div></div></section></section><section class="stack" data-id="5c3fc94e4309a1de4c26d7c0f600dd0e"><section data-id="72a9ea6705182c0e9978af2fd7121ea8"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="8678c08ad28ffc203ade153182e790da"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="0dccfab4315de733435797e7543aaabb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="22c026465bc0d22e3b436ced08688af2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">Now a winner is declared, but it looks like the game just continues on. Also, the reset button doesn't do anything yet.</h3>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left">Let's make sure the game stops when someone has won. We can turn off the buttons using their 'Enabled' property. Try it in the Designer editor - you will see the button go grey and stop working.</h3>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left">What we need is a procedure that does that as part of the program. Try to make one - don't forget to call it! - then go DOWN to check.</h3>
+</div></div></section><section data-id="f6111506a2beaf930102fb5cd85612c9"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="07a3bfaf1b58c2d34094435ff44eaf85"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="eafd1a52d9b7e89e2ae0f9dea067b822"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 356px; height: 216px; left: 602px; top: 210px;" data-block-id="7d1cc29d5832fceaeec70b43fefa16b1"><div class="sl-block-content" style="z-index: 13; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="356" data-natural-height="216" data-src="deck/e0157eb489bab08ef1c818fbd6a17628.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 602px; left: 0px; top: 210px;" data-block-id="3d5e63fc7134cbb1bc7713d1b4807273"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%; text-align: left;">
+<h3>In the Blocks editor, click on the rock button. In that drawer you will find:</h3>
+
+<h3>‘set rock.Enabled to '</h3>
+
+<h3>Drag that out, and from Logic drag the ‘false’ block and attach it. These blocks will make the ‘rock’ button inactive and unresponsive to the player.</h3>
+
+<h3> </h3>
+
+<h3>Make a procedure called disableButtons, drag the blocks there and call it from each procedure</h3>
+</div></div></section></section><section data-id="15ef9d6d35d95aab4f7cecf9854d6f7b"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="504fc9e898f66ca13d4fc5ed76cbd2c0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="a3938576618b0235c289b500ae14d121"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 210px;" data-block-id="574dc8c4ea1bc68120c7ddc5686c262d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%; text-align: left;">
+<h3>We will definitely need to enable the buttons again at some point, so let’s just do that now. Duplicate the disableButtons procedure, rename it enableButtons and change false to true for each button.</h3>
+
+<p> </p>
+
+<h3 style="text-align:left">Now every procedure only does things specific to the player or the computer, or calls another procedure. Nothing is repeated in two different places so changes only ever need to happen once.</h3>
+
+<h3 style="text-align:left">Let’s keep that up :)</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 342px; height: 240px; left: 618px; top: 210px;" data-block-id="d391e9b3c49cf64f7ff06368dbcb4481"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="342" data-natural-height="240" data-src="deck/fe415b92f3f1e7d3af355dc5c83c2562.png"></div></div></section><section class="stack" data-id="f52ef6946da713ed26d616e55ab42418"><section data-id="94815aacb5ff39488684788138c8d1ef"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="595237f8ddbad54f022eae67d385d9eb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="24fe2c95b29ce2ba0cb5751f5126f949"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="3289b1504835793bdc9d9ad382c5e408"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%; text-align: left;">
+<h3>Now we need a reset button. Drag out the event handler. When this button is clicked, we want everything to go back to the same state as when the game starts up.</h3>
+
+<h3>Think about labels and buttons on the screen, and variables in the code.</h3>
+
+<h3> </h3>
+
+<h3> </h3>
+
+<h3> </h3>
+
+<p> </p>
+
+<h3>Go DOWN to check.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 258px; height: 107px; left: 351px; top: 383px;" data-block-id="742f072dd0a8ecc98ad0ae3bb9db811c"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="161" data-natural-height="67" data-src="deck/dd40a6861110dc2a4238c7f2d660857c.png"></div></div></section><section data-id="a35c2b80cd68ede55ed452cbaaba702b"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="4a8d1f978c8a8188640f50c8e2369c2a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="4ed83596fa0fb7839781f75270502efa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="59c95a6c1fd64c148a98bae7962239bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>Your code should look something like this. The order of the blocks, in this case, isn't important.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 409px; height: 248px; left: 276px; top: 296px;" data-block-id="ce7a11ca5915bf32d8aa95c76cd8f34f"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="351" data-natural-height="213" data-src="deck/add939ed2dac0b6db033b1b6a3f75ddf.png"></div></div></section></section><section class="stack" data-id="afea4839331e8059a698310da9271eb7"><section data-id="42c76e8c50fc538bc1c0def2ed339826"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="9d988285d562aaebd7f5e5ba2d1c9865"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="4fe8238499dbd26a361e01fb38210aa0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="a446a5f74e3fb9b0129b5de41adeda6a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>Now we have a first to five game which basically works.</h3>
+
+<h3>A nice addition might be to have a running score.</h3>
+
+<h3>Let’s create another procedure and call it runningScore. What runningScore will do is write the current score onto the scoreboard label. We’re going to create a sentence – sometimes called a string, as in a string of letters – and set the scoreboard text to that.</h3>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<h3>Go into the Text drawer and drag out the join block. It has only two spaces to start with, click the cog and drag over more string blocks to add more. How can you use these blocks to report the scores? Try it, then go DOWN to check.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 309px; height: 152px; left: 326px; top: 414px;" data-block-id="3305c5c75fd2c97e77fc113277f1b7fa"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="386" data-natural-height="190" data-src="deck/731b5ee22096b879165cc5249cdce496.png"></div></div></section><section data-id="e54026d0cfd692bcf5a78a46a3633880"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="eaf2c08c6ca7dd27ce65e2a33a51d60b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="db525a34bb1922c43c0d3cdc768e65b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 536px; height: 168px; left: 212px; top: 360px;" data-block-id="17358e4ddcb017b31a7f39bb02f64f07"><div class="sl-block-content" style="z-index: 12; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="536" data-natural-height="168" data-src="deck/61e56a392c9197b672a5d0363d95c869.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="23c48bba436d758b650102c4f3aae324"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>I’d like my runningScore to look like a scoreboard: Player 2 : 4 Computer.</h3>
+
+<h3>So I’ll need five parts – Player, PlayerScore, “ : “, ComputerScore, “Computer”.</h3>
+
+<h3>First, join them together, then set the scoreboard text.</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 560px;" data-block-id="e30ff2696166ef8fd1e67f6ae52a691e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left; font-size: 70%;">
+<p>Decide how you want your scoreboard to look and create spaces using the cog popup, then fill them with text or 'get' blocks from the Variables drawer.</p>
+</div></div></section></section><section class="stack" data-id="a376ec03542bcaaf9a95e3cc5ff6664d"><section data-id="e29acc1ac94e288651c580eae2abc5ab"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="c5d79c71921f9538ae8a1fb72d505d9f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="dd3b644788ecaf3ccbc5600dcbff85ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="cf41fba92d9cfb9b27c9d69941813afa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>We'll need to call this procedure so it actually runs. But where is the best place to call it from?</h3>
+
+<h3> </h3>
+
+<h3>Look at your other procedures and</h3>
+
+<h3>think about the way that control</h3>
+
+<h3>flows through the logic of the code.</h3>
+
+<h3> </h3>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<h3>Where will we put the 'call runningScore'? Why is this the best place?</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 515px; height: 344px; left: 445px; top: 274px;" data-block-id="199b6e186af1adbe48a737ff24d5ba58"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="696" data-natural-height="465" data-src="deck/637a0e2aa9cee1c5e5c66d9162e83626.png"></div></div></section><section data-id="1a1e89cb9ff65f3816b42d9c435eb3fd"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="5ac46eaaeaa56ec60428dc885ed84c23"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Adding a scoreboard</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="d54d5853d8f5f2b52a164555c8ea9aae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 766px; left: 0px; top: 210px;" data-block-id="b27ed5a81d52716bb5756ebb06a45456"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%; text-align: left;">
+<h3>'runningScore' happens when a button is clicked, so we could call it then, from the three event handlers – but we’d have to call it three times.</h3>
+
+<h3>Or, when the playerWins or computerWins procedures run – but then we still call it from two places.</h3>
+
+<h3>Perhaps the best place to call it is from the findWinner procedure, at the bottom, outside the if…then block, so it runs every time and runs after the scores have been updated.</h3>
+
+<h3>Add the ‘call runningScore’ block to the findWinner procedure.</h3>
+
+<h3> </h3>
+
+<h3>Test it out! Try making your scoreboard look different :)</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 177px; height: 490px; left: 783px; top: 210px;" data-block-id="28997eaac39dc28e35b188e8a40dc880"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="180" data-natural-height="499" data-src="deck/2beb8e466324af92ae7b527bfed34436.png"></div></div></section></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1432437,"slug":"deck","title":"App Factory","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/30efdcfb5ffde2403bd7f6fbf00c86be/thumb.jpg?1550235124","view_count":0,"user":{"id":970977,"username":"cq2019","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/ef7bc22240b52e4dee7641e7a9b361e8?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":2326984,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"concave","theme_id":null,"theme_font":"sketch","theme_color":"sky-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":26,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1550239320306,"font_typekit":null,"font_google":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "concave",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
