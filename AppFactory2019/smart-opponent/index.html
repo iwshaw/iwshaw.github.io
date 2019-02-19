@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>App Factory - Smart Opponent</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-sketch theme-color-sky-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="2c11454db4563e86214b09edaf277b53"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="79a79ccc06070a3f4faa4c2a054f5419"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="cb91dde7d32716c9e4129fbd1fc93983"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="3bfaa922eb9a3d9a8aa6bda00625b268"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3 style="text-align:left">It would be a better challenge if the computer didn’t just guess randomly, but remembered the player’s history of choices in some way and adjusted its play accordingly.</h3>
+
+<p> </p>
+
+<h3 style="text-align:left">So really we are just going to replace the line in computerChooser that sets global computer to a random integer. Let’s make a new procedure and call it smartChooser, and call it from the top of the computerChooser procedure.</h3>
+
+<h3 style="text-align:left"> </h3>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<h3 style="text-align:left">We will need to set global computer from here, but how?</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 431px; height: 137px; left: 265px; top: 488px;" data-block-id="c740fee70b5d6eb3898b3659e59e13c7"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="431" data-natural-height="137" data-lazy-loaded="" data-src="smart-opponent/8893a2a34c8d68497fd174d8c6b71f2f.png"></div></div></section><section class="stack" data-id="fd462a21bd515d4b9eb77df55da1b779"><section data-id="b9d30486fd66d7e47e4425fed5897d50"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="359d0bf6e94c35c58fea0cef8d6a0d36"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="77bf51150d45c904cc1e530bd0b86102"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="56fefdb2ec5c59237ed791a9b4826d5b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>First version – a simple approach.</h3>
+
+<h3> </h3>
+
+<h3>Let’s say the player chooses rock. The let’s make it so the computer will guess that the player will play rock again, and choose paper on the next turn. If the player chooses something else, the computer will play whatever beats that next time.</h3>
+
+<h3> </h3>
+
+<h3>So the computer always responds to the player choice by assuming that’s what they will pick again, and choosing whatever beats that.</h3>
+
+<h3> </h3>
+
+<h3>Think about what variables and try building it in the Blocks editor, then click DOWN to check.</h3>
+</div></div></section><section data-id="0e7757a8629371aceb2c1a1afc06da73"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="0aa4243b111c16176298cef62cf3d5f3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="ff6cf0a3da40346ad0ff34febc5fadef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="4a2bfae13683f66ae2afaf9ae3a163fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 70%;">
+<h3>We’ll need to record the choice the computer will make next time, so initialize a global variable called nextChoice. Set it to “1”, so the computer’s first guess will be rock.</h3>
+
+<h3>Our smartChooser will be very simple – set global computer to get global nextChoice.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 451px; height: 91px; left: 255px; top: 394px;" data-block-id="48110a9751380dcf04ba54bd40ca5152"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="451" data-natural-height="91" data-lazy-loaded="" data-src="smart-opponent/a0b1185b6ef664bfcaa96183978c3afb.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 1px; top: 514px;" data-block-id="5b3efc061af6cbb71b27cba8b889d973"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left; font-size: 70%;">
+<h3>How can we update nextChoice so that it's always the one that beats the player?</h3>
+
+<p> </p>
+
+<h3>Try to build this, then click DOWN to check.</h3>
+</div></div></section><section data-id="6bad2885cc0deed764e3d4e4fed9c539"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="9c63f0e88b016ef63e9199a2c5bb46d4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="18c875f0ba5060bdc9848189098c8fab"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 513px; left: 0px; top: 210px;" data-block-id="c9c246b7aa286b5dd4f1df64deaabc95"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>After it’s set, let’s update it. In smartChooser, under the set global computer line, use an if…else if…else line to set global nextChoice to whatever beats the player choice. So if the player chose 1 (rock), set the nextChoice to paper (2). If it was paper (2), set nextChoice to scissors (3). If anything else (so it must have been scissors (3)), choose rock (1) next time.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 447px; height: 300px; left: 513px; top: 210px;" data-block-id="f6b82b7edf0240165e529dff70a98dd2"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="447" data-natural-height="300" data-lazy-loaded="" data-src="smart-opponent/8e48a7e7f3ae0c61e1f6179c364b9e3a.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 565px;" data-block-id="80ec057cbc29d6ed7260aaa54dd633c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left; font-size: 70%;">
+<h3><strong>Try it out. How can you always lose? Always win? Always draw?</strong></h3>
+
+<h3> </h3>
+
+<h3><strong>Is this a good strategy?</strong></h3>
+</div></div></section></section><section class="stack" data-id="37b331a1dd1793b893f8d40467d06c70"><section data-id="330ea3a2550c7c3af93fca73844cf9c3"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="bc6cf2f049b431867692dd8dd0e39285"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="e4dfdcf649a5cd5b17ffee22b839d56b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="5daaebc8519fa510e36cc614231b9440"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>Really the computer is quite predictable, this is not such a great strategy. Let’s rename that procedure smartChooserRegret, and make a new smartChooser procedure. Don’t forget to update the ‘call smartChooser’ block at the top of computerChooser.</h3>
+
+<p> </p>
+
+<h3>Instead of remembering only one step back, let’s try keeping track of the whole history of the game.</h3>
+
+<p> </p>
+
+<h3>Think about how to do that and what variables you will need. Then click DOWN to check.</h3>
+</div></div></section><section data-id="6c80de7aafc10a603d9ac79a096bdb53"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="bfa527e4cfa9d21d8a5c63b2e6f4b80a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="bed8829ab72afb6050087b608b30b2c0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 201px;" data-block-id="b9003cfbbc2bd145ec728a6ea88ac60d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">Initialise three global variables, call them something like playerRockCount, playerPaperCount and playerScissorsCount. Set them all to zero. Now every time the player plays, we will update the count, and make a decision based on the player’s favourite choice.</h3>
+
+<h3 style="text-align:left">First of all, smartChooser should update the counts. The way to update a count is to change the count to whatever it is up to now, plus one.</h3>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left"> </h3>
+
+<p> </p>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left">Next, we will decide which count is largest. How can we find the largest of three numbers? Try it out, then click DOWN to check.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 336px; height: 129px; left: 0px; top: 452px;" data-block-id="62d723f739114b5c46e031aa5c3e1113"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="336" data-natural-height="129" data-lazy-loaded="" data-src="smart-opponent/19f56aa5fb1996f8ac74676fffeac3e3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 591px; height: 193px; left: 369px; top: 420px;" data-block-id="ba548f1f25bfa8f4b08badfb7ca303b2"><div class="sl-block-content" style="z-index: 15; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="750" data-natural-height="245" data-lazy-loaded="" data-src="smart-opponent/c78365a033d4f6ca836b851160a04f0b.png"></div></div></section><section data-id="34fd493924c915a7e448f7933b437db8"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="97a64e230a85b24d9df5f19c781f794c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="f8e239dd7558796f500dcd5046e7b059"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 199px;" data-block-id="6acc4a5a22eef80d77dedd6607348946"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">It will look something like:</h3>
+
+<h3 style="text-align:left">If there are more Rocks than Paper (Rock Count &gt; Paper Count)</h3>
+
+<h3 style="text-align:left">                And if more Rocks than Scissors too (Rock Count &gt; Scissors Count)</h3>
+
+<h3 style="text-align:left">                                Rock is highest. Choose paper to beat it.</h3>
+
+<h3 style="text-align:left">                Or else</h3>
+
+<h3 style="text-align:left">                                Scissors is highest. Choose rock to beat it.</h3>
+
+<h3 style="text-align:left">Or else</h3>
+
+<h3 style="text-align:left">                If there is more Paper than Scissors (Paper Count &gt; Scissors Count)</h3>
+
+<h3 style="text-align:left">                                Paper is highest. Choose scissors to beat it.</h3>
+
+<h3 style="text-align:left">                Or else</h3>
+
+<h3 style="text-align:left">                                Scissors is highest. Choose rock to beat it.</h3>
+
+<h3 style="text-align:left">Build this from blocks, and click DOWN to check.</h3>
+</div></div></section><section data-id="25efc32999820bbec1adbdfdf99ed0fd"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="242ecf0df610e0121ce360043e5d4025"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="1b56be081fef4695fe18186375c1b145"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 752px; height: 325px; left: 104px; top: 210px;" data-block-id="d80e2fd859203205c4b2fcb8618b397a"><div class="sl-block-content" style="z-index: 13; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="752" data-natural-height="325" data-lazy-loaded="" data-src="smart-opponent/ba7be36f60365445569edc6a38eb2c20.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 559px;" data-block-id="5642278f8cab401074b52804d422b730"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: left; font-size: 70%;">
+<h3>This is what our blocks look like.</h3>
+
+<h3> </h3>
+
+<h3>Try it out - is it a good strategy? How can you win? Lose? Draw?</h3>
+</div></div></section></section><section class="stack" data-id="9d22787b83db59160ab8e2e6543332dd"><section data-id="9b94673e76dacadf3f87c827eb1c70c2"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="2c42be166956f216748c70a21dc7be99"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="896c14d42c16587aa982eb50e761cfb4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="fbc8dcbbbf9e505e9666679f125607c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>That opponent gets quite predictable too. Maybe we should change the algorithm one more time. Rename the procedure as smartChooserFavourite and make a new smartChooser. Don’t forget to update the call block.</h3>
+
+<p> </p>
+
+<h3>This time we will choose randomly, so the player never guesses what we are doing. But we will add bias to our random choice so we win more often than we lose – we win, or we learn.</h3>
+
+<h3> </h3>
+
+<h3>We're going to keep the part where we record player choices though, so duplicate the block that updates the counts from smartChooserFavourite.</h3>
+
+<p> </p>
+
+<p> </p>
+</div></div></section><section data-id="36101a3b904f7690a5c9bd7058f04c1a"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="6069be38401b9c3c1fdf3aa4d303d996"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="e9312a16faa654b47db56349e658dbf3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="56ee9b14ae0e5840f5f99789d8d68115"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>Let's say the player has chosen rock twice, paper four times and scissors three times. Then their choices are:</h3>
+
+<h3> rock</h3>
+
+<h3> rock</h3>
+
+<h3>  paper</h3>
+
+<h3>  paper</h3>
+
+<h3>  paper</h3>
+
+<h3>  paper</h3>
+
+<h3>    scissors</h3>
+
+<h3>    scissors</h3>
+
+<h3>    scissors</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 780px; left: 180px; top: 332px;" data-block-id="6934d0ae9f07c478ac42e28681b174ef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%; border-width: 4px;">
+<h3 style="text-align:left">So out of nine total choices, the odds of rock were two in nine, paper were four in nine and scissors were three in nine. So let's use those historical odds to pick our next move - two in nine chance to pick paper to beat rock, four in nine to pick scissors to beat paper, and three in nine to pick rock to beat scissors.</h3>
+
+<p> </p>
+
+<h3 style="text-align: left;">Try building this in blocks, then click DOWN to check.</h3>
+</div></div></section><section data-id="1cd01d4b1b55792d04c6cee7b979ebd4"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="5b69e259468cbcb711071fc0b17b657f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="39db9b821a1ba0b061db6431a274680a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 57px; left: 77px; top: 210px;" data-block-id="12e09c161632f88bf29dd7e78e0cfa1e"><div class="sl-block-content" style="z-index: 13; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="1095" data-natural-height="77" data-src="smart-opponent/d0de0e7b3795d87b0a2c8ccfeb62db28.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 292px;" data-block-id="ac4ed31e535a22251f7aa7c2ff482282"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: left; font-size: 70%;">
+<h3>First of all, let's pick a random number. But instead of just picking from one to three, let's pick a number from one to the total number of choices the player has made.</h3>
+
+<h3> </h3>
+
+<h3>We could keep track of the total number of choices, or we could just add together the number of rocks, papers and scissors the player has historically chosen.</h3>
+
+<p> </p>
+
+<h3>Now that we have our choice, how can we relate it to rock, paper or scissors in a way that is proportional to how often they have been chosen? Try it, then click DOWN to check.</h3>
+</div></div></section><section data-id="b64d9c251654b8f16953d1760c1a6356"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="e3a3d805a669f2f758ba43e5697ade61"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="6e57d012ed78d18c25b2c8c0c9c9c10d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 701px; height: 280px; left: 130px; top: 210px;" data-block-id="3aae6857079b739957e5adb539ed8bc3"><div class="sl-block-content" style="z-index: 13; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="909" data-natural-height="363" data-src="smart-opponent/3e05ba5e14f27e30bcbee72376c7a671.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 523px;" data-block-id="2721275999a638fda7e66911755460e5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%; text-align: left;">
+<h3>This is one way to do it. I've used a local variable called 'random' - it's still a variable but after we've used it we throw it away, other procedures in the code can't see it. If 'random' is less than or equal to the number of rock choices, choose paper. If 'random' is between the rock and paper choices, choose scissors. Otherwise, choose rock. Try it out - is this strategy better?</h3>
+</div></div></section></section><section data-id="5fd0fda51ae1774ed8bcb65897eb16a1"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 103px;" data-block-id="bf9b3a883c30bb11277b0763bd262e0e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Smart opponent</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="8b846e7fd42a58203fa501a7edda5f44"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="a6a148a61dd2d1aceb8f2bc02b88bd6d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<h3 style="text-align:left">Well, that last strategy used a mixture of randomness and prediction to win a little more often, but still relies on the player being predictable and having favourite choices they tend to make more often than others.</h3>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left">Can you think of any more strategies? Try them out!</h3>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1434757,"slug":"smart-opponent","title":"App Factory - Smart Opponent","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/12578d636a2205218c994b95dd2c307a/thumb.jpg?1550509545","view_count":0,"user":{"id":970977,"username":"cq2019","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/ef7bc22240b52e4dee7641e7a9b361e8?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":2326984,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"concave","theme_id":null,"theme_font":"sketch","theme_color":"sky-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":16,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1550509549612,"font_typekit":null,"font_google":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "concave",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
