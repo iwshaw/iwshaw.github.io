@@ -3,9 +3,13 @@ body {margin:0;}
 .navbar {
   overflow: hidden;
   background-color: rgb(0,0,0,0);
+  background-image: url("../app-factory-menu/esbanner.png");
+  background-size:contain;
+  background-repeat: no-repeat;
   position: fixed;
   top: 0;
-  width: 17%;
+  width: 20%;
+  height: 15%;
 }
 
 .navbar a {
