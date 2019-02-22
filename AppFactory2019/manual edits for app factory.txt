@@ -1,0 +1,13 @@
+Add esbanner.jpg to the folder 'app-factory-menu'
+Add backtomenu.css to the folder 'lib'
+
+In the main index page:
+  
+  Make the href tags relative
+
+
+In each module index page:
+
+  Add at the bottom of the page before </body>:
+    <a href="../index.html#/1"><div class="navbar"></div></a>
+		

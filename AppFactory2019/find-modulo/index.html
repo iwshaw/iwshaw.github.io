@@ -9,133 +9,310 @@
 
 		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
 
-		<link rel="stylesheet" type="text/css" href="../lib/backtomenu.css">
+
 
 	</head>
 	<body class="reveal-viewport theme-font-sketch theme-color-sky-blue">
 		<div class="reveal">
 			<div class="slides">
-				<section data-id="faeb69ba2bdba93263c52c33e6255bcf"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="7f5b66ad756022b1550b8a01dd9c2a76"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+				<section data-id="c609aeaae67ffc99ce37ec513e460d8a"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="ebc56c825e71b311110938fec1a429e6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2>Finding the winner with modulo</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="fad46c8d8f5bd1e14a206f34d88280c8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 240px; top: 210px;" data-block-id="e88efcf6c8e1490ebb11ccb2084e411c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 70%;">
+<h3>In this challenge you will:</h3>
+
+<ul>
+	<li>
+	<h3>analyze the game logic</h3>
+	</li>
+	<li>
+	<h3>create a mathematical model of the game</h3>
+	</li>
+	<li>
+	<h3>implement the model in block code</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="faeb69ba2bdba93263c52c33e6255bcf"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="7f5b66ad756022b1550b8a01dd9c2a76"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h2>Finding the winner with modulo</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="0528cd098cd4a02e98cce9a91a9217ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h1>App Factory</h1>
 </div></div>
 <div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 458px; height: 490px; left: 502px; top: 210px;" data-block-id="0c7e54744fb147017e5c9ef64665015b"><div class="sl-block-content" style="z-index: 13; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="531" data-natural-height="568" data-lazy-loaded="" data-src="find-modulo/30b5920e4125886d2198a02d51260a8c.png"></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 476px; left: 0px; top: 210px;" data-block-id="be7464f56d8de3aafdaa42cd2ac68bee"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%; text-align: left;">
-<h3>Checking all these different possibilities is quite an effort. There may be a more mathematically elegant approach.</h3>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 502px; left: 0px; top: 210px;" data-block-id="be7464f56d8de3aafdaa42cd2ac68bee"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%; text-align: left;">
+<h3>Checking all these different possibilities is quite an effort. Can you spot any repetition in the findWinner code?</h3>
 
-<h3> </h3>
+<p> </p>
+
+<h3>There may be a more shorter, more maintainable approach if we use a bit of maths.</h3>
+
+<p> </p>
 
 <h3>Let’s think about the rules of the game, setting rock=1, paper=2, scissors=3.</h3>
-</div></div></section><section data-id="e1d0c92c57afbfc46f92fd9cceb97d4c"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="c352a5f92155868f84f1774420e81db9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="ff29cfff2152d1c72f8a0c375ef2bf5c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+</div></div></section><section data-id="46114ce6cbbc493c68b3ff01859822f4"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="40c8a37bc5ae99e5b103c40c9ba3c75d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h2>Finding the winner with modulo</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="3bef54a7de5d6fbc32e7e5d1bea0cc14"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h1>App Factory</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 216px;" data-block-id="ed1f45c3023a61c4a939f684a996fbd6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 70%;">
-<h3>If an arrow means ‘is beaten by’ we can say:</h3>
-
-<h3>1 -&gt; 2 -&gt; 3 -&gt; 1 -&gt; 2 …</h3>
-
-<h3>So it’s a circular relationship.                                        </h3>
-
-<h3>That’s if we go forward in our numbering.</h3>
-
-<p> </p>
-
-<h3>What if we go backward?</h3>
-
-<h3>3 =&gt; 2 =&gt; 1 =&gt; 3 =&gt; 2 …</h3>
-
-<h3>Still a circular relationship.      </h3>
-
-<h3>                                     </h3>
-
-<h3>So the whole universe of the game is a closed loop. If we go forward, each member is beaten by the next, and if we go backwards, it beats the next.</h3>
-
-<h3>Let’s remember this for later.</h3>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="fe11ce2002db690b1c7caf7a29e31a78"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>The normal number line keeps going and going to infinity.</h3>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 706px; top: 207px;" data-block-id="edf8c28a7454d69b2b2d898bd99318dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
-<p>1</p>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 551px; left: 205px; top: 280px;" data-block-id="99eadd7712e2d0f9896b195e7d8c2521"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%; text-align: left;">
+<h3>0 1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  ...</h3>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 785px; top: 345px;" data-block-id="f7d3e134586bc703ee38c36015ee8b17"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
-<p>2</p>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 160px; top: 315px;" data-block-id="f778b1be483be4477d459136f4cab7b7"><div class="sl-block-content" data-line-x1="-220" data-line-y1="65" data-line-x2="445" data-line-y2="65" data-line-color="#000000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 15;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="665" height="1" viewbox="-220 65 665 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-220" y1="65" x2="442" y2="65"></line><line stroke="#000000" stroke-width="4" x1="-220" y1="65" x2="442" y2="65"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="4" transform="translate(442,65) rotate(90)" d="M 9 9 L 0 0 L -9 9"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 212px; top: 315px;" data-block-id="17fd1e886271af909f53b3edb90a6dce"><div class="sl-block-content" data-line-x1="-168" data-line-y1="77" data-line-x2="-168" data-line-y2="65" data-line-color="#000000" data-line-start-type="none" data-line-end-type="none" style="z-index: 16;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="12" viewbox="-168 65 1 12"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-168" y1="77" x2="-168" y2="65"></line><line stroke="#000000" stroke-width="4" x1="-168" y1="77" x2="-168" y2="65"></line></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 959px; left: 0px; top: 367px;" data-block-id="387646ec614c0a897fcfce24486dc30f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; text-align: left; font-size: 70%;">
+<h3>But this isn't a number line. It's more like a number loop, like the number line has wrapped around onto itself. Only 1, 2 and 3 exist. After 3, you just go back to 1 again. Let's call this 'mod 3', for the rule that says when we get to 3, start over.</h3>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 625px; top: 345px;" data-block-id="7d1bf4eca3a72436f1d22882f4dd7542"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
-<p>3</p>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 132px; height: 132px; left: 212px; top: 498px;" data-block-id="e677e2bd63334b662afc81a56c34ff98"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 18;" data-shape-stroke-color="#000000" data-shape-stroke-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 132 132"><defs><clippath id="shape-mask-2-1550761278455"><ellipse rx="66" ry="66" cx="66" cy="66"></ellipse></clippath></defs><ellipse rx="66" ry="66" cx="66" cy="66" clip-path="url(#shape-mask-2-1550761278455)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#000000" stroke-width="8"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 290px; top: 575px;" data-block-id="ba0deab160ebb787b69e015d6fe07b1a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19;">
+<h3>1</h3>
 </div></div>
-<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 742px; top: 246px;" data-block-id="ddc112dbad7c386319458e5a82510ae4"><div class="sl-block-content" data-line-x1="405" data-line-y1="61" data-line-x2="362" data-line-y2="-38" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 19;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="43" height="99" viewbox="362 -38 43 99"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="404" y1="58" x2="362" y2="-38"></line><line stroke="#000000" stroke-width="4" x1="404" y1="58" x2="362" y2="-38"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="4" transform="translate(404,58) rotate(-23.477)" d="M -9 -9 L 0 0 L 9 -9"></path></svg></div></div>
-<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 655px; top: 365px;" data-block-id="3e57f9c57c95fe349ca000712ec21e67"><div class="sl-block-content" data-line-x1="265" data-line-y1="71" data-line-x2="395" data-line-y2="71" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 21;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="130" height="1" viewbox="265 71 130 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="268" y1="71" x2="395" y2="71"></line><line stroke="#000000" stroke-width="4" x1="268" y1="71" x2="395" y2="71"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="4" transform="translate(268,71) rotate(90)" d="M -9 -9 L 0 0 L 9 -9"></path></svg></div></div>
-<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 655px; top: 246px;" data-block-id="021e6b9b6dd2e4774fea858dd9b429ce"><div class="sl-block-content" data-line-x1="411" data-line-y1="37" data-line-x2="360" data-line-y2="136" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 23;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="51" height="99" viewbox="360 37 51 99"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="410" y1="40" x2="360" y2="136"></line><line stroke="#000000" stroke-width="4" x1="410" y1="40" x2="360" y2="136"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="4" transform="translate(410,40) rotate(207.255)" d="M -9 -9 L 0 0 L 9 -9"></path></svg></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 707px; top: 392px;" data-block-id="81a8095b963ddc9ae0269e305c4d185a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25;">
-<p><span style="color:#FF0000">1</span></p>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 212px; top: 542px;" data-block-id="e3f3b424c9587cfc5a40988429bae542"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20;">
+<h3>2</h3>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 786px; top: 530px;" data-block-id="75d2f6db3bbba74ec50e3387e24b96e7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26;">
-<p><span style="color:#FF0000">2</span></p>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 281px; top: 498px;" data-block-id="a9c42ef866e80c260a5ca9a9d83525a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21;">
+<h3>3</h3>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 626px; top: 530px;" data-block-id="b642ce452f7925d0826fdb653b85e189"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 27;">
-<p><span style="color:#FF0000">3</span></p>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 498px; top: 569px;" data-block-id="021ac5ed70c0418ec81c5d48cc3d896b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(102, 102, 102);">
+<h3>4</h3>
 </div></div>
-<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 743px; top: 431px;" data-block-id="73984577ecb35883fcecbfcfa4ef6809"><div class="sl-block-content" data-line-x1="405" data-line-y1="61" data-line-x2="362" data-line-y2="-38" data-line-color="#ff0000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 28;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="43" height="99" viewbox="362 -38 43 99"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="405" y1="61" x2="363" y2="-35"></line><line stroke="#ff0000" stroke-width="4" x1="405" y1="61" x2="363" y2="-35"></line><path style="fill: rgba(0,0,0,0);" stroke="#ff0000" stroke-width="4" transform="translate(363,-35) rotate(-23.477)" d="M 9 9 L 0 0 L -9 9"></path></svg></div></div>
-<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 656px; top: 550px;" data-block-id="adc6149dc5090ff914e88cd49ebac02e"><div class="sl-block-content" data-line-x1="265" data-line-y1="71" data-line-x2="395" data-line-y2="71" data-line-color="#ff0000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 29;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="130" height="1" viewbox="265 71 130 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="265" y1="71" x2="392" y2="71"></line><line stroke="#ff0000" stroke-width="4" x1="265" y1="71" x2="392" y2="71"></line><path style="fill: rgba(0,0,0,0);" stroke="#ff0000" stroke-width="4" transform="translate(392,71) rotate(90)" d="M 9 9 L 0 0 L -9 9"></path></svg></div></div>
-<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 656px; top: 431px;" data-block-id="035ba19bd835754eeb64f7bc60086e55"><div class="sl-block-content" data-line-x1="411" data-line-y1="37" data-line-x2="360" data-line-y2="136" data-line-color="#ff0000" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 30;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="51" height="99" viewbox="360 37 51 99"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="411" y1="37" x2="361" y2="133"></line><line stroke="#ff0000" stroke-width="4" x1="411" y1="37" x2="361" y2="133"></line><path style="fill: rgba(0,0,0,0);" stroke="#ff0000" stroke-width="4" transform="translate(361,133) rotate(207.255)" d="M 9 9 L 0 0 L -9 9"></path></svg></div></div></section><section data-id="613025d6c850bfe37238cd4db93d035b"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="3f5393331bf903649931e8d768eef91c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="95e717d4b1fe330a2e70ef83f624f48b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 561px; top: 598px;" data-block-id="a5c12e726ce865edb8c97cf29bf445d7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(136, 136, 136);">
+<h3>5</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 660px; top: 583px;" data-block-id="0161c7eaa7ca0dbc914d9f1da01ef2b5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(170, 170, 170);">
+<h3>6</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 756px; top: 609px;" data-block-id="359bff50cd67a0de45b0b0ea6287352f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(170, 170, 170);">
+<h3>7</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 923px; top: 649px;" data-block-id="361738c7889876cb5d44399bd47d8298"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26; color: rgb(204, 204, 204);">
+<h3>8</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 25px; height: 25px; left: 200px; top: 614px;" data-block-id="51d2ccc2863161a68fa5708f45d3d5ad"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up-left" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 28;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M4 18c0 1.105 0.895 2 2 2s2-0.895 2-2v-7.172l16.586 16.586c0.781 0.781 2.047 0.781 2.828 0 0.391-0.391 0.586-0.902 0.586-1.414s-0.195-1.024-0.586-1.414l-16.586-16.586h7.172c1.105 0 2-0.895 2-2s-0.895-2-2-2h-14v14z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 25px; height: 25px; left: 200px; top: 485px;" data-block-id="d54e97b4026da7c1b6532365de927391"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up-right" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 29;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M26.001 4c-0 0-0.001 0-0.001 0h-11.999c-1.105 0-2 0.895-2 2s0.895 2 2 2h7.172l-16.586 16.586c-0.781 0.781-0.781 2.047 0 2.828 0.391 0.391 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586l16.586-16.586v7.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-14h-1.999z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 26px; height: 26px; left: 331px; top: 485px;" data-block-id="10cc04c48b54a7e3d87ad72abe19c13c"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-down-right" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 30;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M28 14c0-1.105-0.895-2-2-2s-2 0.895-2 2v7.172l-16.586-16.586c-0.781-0.781-2.047-0.781-2.828 0-0.391 0.391-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414l16.586 16.586h-7.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h14v-14z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 26px; height: 26px; left: 331px; top: 617px;" data-block-id="a74e1df890e78ae104b32c240524a3f2"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-down-left" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 31;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M18 28c1.105 0 2-0.895 2-2s-0.895-2-2-2h-7.172l16.586-16.586c0.781-0.781 0.781-2.047 0-2.828-0.391-0.391-0.902-0.586-1.414-0.586s-1.024 0.195-1.414 0.586l-16.586 16.586v-7.172c0-1.105-0.895-2-2-2s-2 0.895-2 2v14h14z"></path></g></svg></div></div></section><section class="stack" data-id="d932b7d37e5237d65aee2607401cbed5"><section data-id="68b7a73306f9424f1745295b3cd63243"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="0a29bdead6ceb20431172f682fc80b5a">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+        <h2>Finding the winner with modulo</h2>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="841ba0dcd34ead1f918f70b7408e328d">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+        <h1>App Factory</h1>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="66cc8e0c77f1304d11cdc2a462e147de">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%; text-align: left;">
+        <h3>Here’s another way of looking at it. You go to the shops to buy some ice cream. The cartons are 3 pounds each.</h3>
+        <p> </p>
+        <h3>If you go with 0, 1 or 2 pounds, you can’t buy any. But you still have 0, 1 or 2 pounds left over.</h3>
+        <h3> </h3>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <h3>How much change do you have if you go in with 3 pounds?</h3>
+        <h3> </h3>
+        <h3>What about 4 pounds? 5 pounds?</h3>
+    </div>
+</div>
+<div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; min-height: 30px; width: 368px; left: 296px; top: 402px;" data-block-id="aebd4bd49d7108468acf52a061fd3bdd">
+    <div class="sl-block-content" style="z-index: 14; font-size: 60%; text-align: center; background-color: rgba(0, 0, 0, 0);" data-table-rows="4" data-table-has-header="true">
+        <table>
+            <tbody>
+                <tr>
+                    <th style="width: 100px;">Start with</th>
+                    <th style="width: 100px;">End with</th>
+                    <th>Ice Cream Bought</th>
+                </tr>
+                <tr>
+                    <td style="width: 100px;">0</td>
+                    <td style="width: 100px;">0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td style="width: 100px;">1</td>
+                    <td style="width: 100px;">1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></section><section data-id="185853a6c0678ddcec58dbb3f0a9db4c"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="350be540d42ff808dea017ae129f2590">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+        <h2>Finding the winner with modulo</h2>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="358a9242733301c0f320752f910d7b46">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+        <h1>App Factory</h1>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="9df544aa713639b48147fe8f19738a41">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+        <h3>If you go with 3 pounds, you buy one, but have zero pounds change.</h3>
+        <p> </p>
+        <h3>If you go with 4 pounds, you buy one, and have one pound left over.</h3>
+        <p> </p>
+        <h3>If you go with 5 pounds, the change is 2 pounds.</h3>
+    </div>
+</div>
+<div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; min-height: 30px; width: 368px; left: 296px; top: 410px;" data-block-id="6d9287f958e9cda123dba0c78555193c">
+    <div class="sl-block-content" style="z-index: 14; font-size: 60%; text-align: center;" data-table-rows="7">
+        <table>
+            <tbody>
+                <tr>
+                    <th style="width: 100px;">Start with</th>
+                    <th style="width: 100px;">End with</th>
+                    <th>Ice Cream Bought</th>
+                </tr>
+                <tr>
+                    <td style="width: 100px;">0</td>
+                    <td style="width: 100px;">0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td style="width: 100px;">1</td>
+                    <td style="width: 100px;">1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 665px;" data-block-id="0982bf7f1972c9c7ca7c706c70ba55ee">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 70%; text-align: left;">
+        <h3>What if you go with 13 pounds?</h3>
+    </div>
+</div></section><section data-id="7e5591853deb925e5464da9b706dd394"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="106fe75807d5bc6e1f0a44b832980fec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h2>Finding the winner with modulo</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="6f9d2ce091f3cddb11c83844beb2dd70"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h1>App Factory</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 204px;" data-block-id="04f2117e35ef15da37055a0117962422"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 70%;">
-<h3>Can we define some arithmetic for this loop?</h3>
-
-<h3>Let’s start at rock(one). We’ve taken zero steps. If we take one step forward, that’s paper(two). Another step and that’s scissors(three). But if we take a third step, we’re back to rock(one).</h3>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="3dfbad40450dcba31f50150b51cd355b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>Well, we know that 12 is a multiple of three. So you’ll have 1 pound change.</h3>
 
 <p> </p>
-
-<h3>So three is out of bounds for this game universe. It doesn’t make sense to the rock paper scissors world. There can only ever be zero, one or two steps, otherwise you just end up where you started. We should just start over at zero. We’ll call this rule <strong>modulo</strong>, or mod. Let’s make it ‘mod 3’ so we can remember how big the universe is.</h3>
-</div></div></section><section data-id="45a0d1fbda63673770d9026d282ac8e7"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="e9e5ab6adc07d86e80c5b18cfe14f498"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="07eab6c51b05ce32cbd059310391f65c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-<h1>App Factory</h1>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="2adb6cf782ef78496fb05aeb45d67174"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%; text-align: left;">
-<h3>So no steps is 0 mod 3 = 0.</h3>
-
-<h3>One step, 1 mod 3 = 1.</h3>
-
-<h3>Two steps, 2 mod 3 = 2.</h3>
-
-<h3>Three steps, 3 mod 3 = 0 again.</h3>
-
-<p> </p>
-
-<h3>Similarly, -1 mod 3 = 2, that’s taking a step backwards from zero to the highest number we know.</h3>
-
-<p> </p>
-
-<h3>What is 4 mod 3? What about 333 mod 3?</h3>
-</div></div></section><section data-id="68b7a73306f9424f1745295b3cd63243"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="0a29bdead6ceb20431172f682fc80b5a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="841ba0dcd34ead1f918f70b7408e328d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-<h1>App Factory</h1>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 191px;" data-block-id="66cc8e0c77f1304d11cdc2a462e147de"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%; text-align: left;">
-<h3>Here’s another way of looking at it. You go to the shops to buy some ice cream. The cartons are 3 pounds each.</h3>
-
-<h3>If you go with 0, 1 or 2 pounds, you can’t buy any. But you still have 0, 1 or 2 pounds left over.</h3>
-
-<h3>If you go with 3 pounds, you buy one, but have zero pounds change.</h3>
-
-<h3>If you go with 4 pounds, you buy one, and have one pound left over.</h3>
-
-<h3>If you go with 5 pounds, the change is 2 pounds.</h3>
-
-<h3>What if you go with 13 pounds? Well, we know that 12 is a multiple of three. So you’ll have 1 pound change.</h3>
 
 <h3>Modulo is giving the change, and just forgets about how much ice-cream you bought.</h3>
 
-<h3 style="text-align: left;">We can use it to count the steps to where we end up, no matter the path to getting there.</h3>
-</div></div></section><section data-id="14abe36caaf14503def7ff973e2f11cd"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="5a78d35934d338cbd36c71d19167cbe1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
+<p> </p>
+
+<h3 style="text-align:left">We can use it to count the steps to where we end up, no matter the path to getting there.</h3>
+</div></div></section></section><section class="stack" data-id="1487fbfc3cb8769b056d29a0ebc5cc5a"><section data-id="45a0d1fbda63673770d9026d282ac8e7"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="e9e5ab6adc07d86e80c5b18cfe14f498"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="07eab6c51b05ce32cbd059310391f65c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="2adb6cf782ef78496fb05aeb45d67174"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 70%; text-align: left;">
+<h3>Using the mod 3 number loop, let's count the steps we take and what that means.</h3>
+
+<p> </p>
+
+<h3>So if we take no steps, that is 0 mod 3 = 0. A draw.</h3>
+
+<h3>If we take one step forward, 1 mod 3 = 1. You lose.</h3>
+
+<h3>If we take two steps forward, 2 mod 3 = 2. You win.</h3>
+
+<h3> </h3>
+
+<h3>Three steps forward is 3 mod 3 = 0, a draw again.</h3>
+
+<p> </p>
+
+<h3>What if we take one step back? Think about it first, then click DOWN to see.</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 132px; height: 132px; left: 734px; top: 320px;" data-block-id="6f5c5f6cab1a92f0f0d6180f6e974593"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 21;" data-shape-stroke-color="#000000" data-shape-stroke-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 132 132"><defs><clippath id="shape-mask-1-1550841619214"><ellipse rx="66" ry="66" cx="66" cy="66"></ellipse></clippath></defs><ellipse rx="66" ry="66" cx="66" cy="66" clip-path="url(#shape-mask-1-1550841619214)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#000000" stroke-width="8"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 812px; top: 397px;" data-block-id="b7207f71390d4c78e9928e1749789382"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22;">
+<h3>1</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 734px; top: 364px;" data-block-id="58b0bdf72fb916c5d62f809704482b5a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;">
+<h3>2</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 803px; top: 320px;" data-block-id="eb0d16ad010a545f3781f950a0482041"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24;">
+<h3>3</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 25px; height: 25px; left: 722px; top: 436px;" data-block-id="5ef7e3dbce6b2f41d014fea39b4eb719"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up-left" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M4 18c0 1.105 0.895 2 2 2s2-0.895 2-2v-7.172l16.586 16.586c0.781 0.781 2.047 0.781 2.828 0 0.391-0.391 0.586-0.902 0.586-1.414s-0.195-1.024-0.586-1.414l-16.586-16.586h7.172c1.105 0 2-0.895 2-2s-0.895-2-2-2h-14v14z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 25px; height: 25px; left: 722px; top: 307px;" data-block-id="a1fdc4b5909cf3d827c1b6cb35d1b64d"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up-right" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 26;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M26.001 4c-0 0-0.001 0-0.001 0h-11.999c-1.105 0-2 0.895-2 2s0.895 2 2 2h7.172l-16.586 16.586c-0.781 0.781-0.781 2.047 0 2.828 0.391 0.391 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586l16.586-16.586v7.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-14h-1.999z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 26px; height: 26px; left: 853px; top: 307px;" data-block-id="20d0730e2758d8938e0892df0fbdb96b"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-down-right" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 27;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M28 14c0-1.105-0.895-2-2-2s-2 0.895-2 2v7.172l-16.586-16.586c-0.781-0.781-2.047-0.781-2.828 0-0.391 0.391-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414l16.586 16.586h-7.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h14v-14z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 26px; height: 26px; left: 853px; top: 436px;" data-block-id="181ba8fc0fbecc13f3fb64f6c08b3dff"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-down-left" data-shape-fill-color="rgb(136, 136, 136)" data-shape-stretch="true" style="z-index: 28;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(136, 136, 136)"><path d="M18 28c1.105 0 2-0.895 2-2s-0.895-2-2-2h-7.172l16.586-16.586c0.781-0.781 0.781-2.047 0-2.828-0.391-0.391-0.902-0.586-1.414-0.586s-1.024 0.195-1.414 0.586l-16.586 16.586v-7.172c0-1.105-0.895-2-2-2s-2 0.895-2 2v14h14z"></path></g></svg></div></div></section><section data-id="8ee4c61e117b7a278c10b653391ad7bb"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="4871e6485fb42088a0cff9c756262ef6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2>Finding the winner with modulo</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="90a8f23763612ab746f23d4b277f7346"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="0e4e8acbf3cc87347c034b7c16c62094"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 70%;">
+<h3>If you're at 3 and take a step backwards, you arrive at 2.</h3>
+
+<h3> </h3>
+
+<h3>If you're at 2 and take a step backwards, you arrive at 1.</h3>
+
+<h3> </h3>
+
+<h3>If you're at 1 and take a step backwards, where can you go? You must loop around to 3 again.</h3>
+
+<h3> </h3>
+
+<h3>A step backwards is like taking -1 steps, and when you're at 1 already, -1 steps takes you backwards round the loop to 3!</h3>
+
+<p> </p>
+
+<h3>So if -1 mod 3 steps is just one step backwards. It's the same as taking 2 steps forward.</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 132px; height: 132px; left: 735px; top: 223px;" data-block-id="f05411da08e6a27c04e1bc78f9bd9c69"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 21;" data-shape-stroke-color="#000000" data-shape-stroke-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 132 132"><defs><clippath id="shape-mask-2-1550841732494"><ellipse rx="66" ry="66" cx="66" cy="66"></ellipse></clippath></defs><ellipse rx="66" ry="66" cx="66" cy="66" clip-path="url(#shape-mask-2-1550841732494)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#000000" stroke-width="8"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 813px; top: 300px;" data-block-id="a676fad853bc51fc702cc36620f7d238"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22;">
+<h3>1</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 735px; top: 267px;" data-block-id="13b2a2555c9732a931cc4b513c8c53d2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;">
+<h3>2</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 37px; left: 804px; top: 223px;" data-block-id="21b58939be5f01b8bd0b4a2a6627304f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24;">
+<h3>3</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 25px; height: 25px; left: 855px; top: 211px;" data-block-id="011383a7df43b90f653415b1422e86d9"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up-left" data-shape-fill-color="rgb(234, 153, 153)" data-shape-stretch="true" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(234, 153, 153)"><path d="M4 18c0 1.105 0.895 2 2 2s2-0.895 2-2v-7.172l16.586 16.586c0.781 0.781 2.047 0.781 2.828 0 0.391-0.391 0.586-0.902 0.586-1.414s-0.195-1.024-0.586-1.414l-16.586-16.586h7.172c1.105 0 2-0.895 2-2s-0.895-2-2-2h-14v14z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 25px; height: 25px; left: 855px; top: 339px;" data-block-id="3fade9a96c6b268eebd590cb7995f8cf"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up-right" data-shape-fill-color="rgb(234, 153, 153)" data-shape-stretch="true" style="z-index: 26;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(234, 153, 153)"><path d="M26.001 4c-0 0-0.001 0-0.001 0h-11.999c-1.105 0-2 0.895-2 2s0.895 2 2 2h7.172l-16.586 16.586c-0.781 0.781-0.781 2.047 0 2.828 0.391 0.391 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586l16.586-16.586v7.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-14h-1.999z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 26px; height: 26px; left: 723px; top: 342px;" data-block-id="eaeb35ed4802af10e423d3898849c5b3"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-down-right" data-shape-fill-color="rgb(234, 153, 153)" data-shape-stretch="true" style="z-index: 27;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(234, 153, 153)"><path d="M28 14c0-1.105-0.895-2-2-2s-2 0.895-2 2v7.172l-16.586-16.586c-0.781-0.781-2.047-0.781-2.828 0-0.391 0.391-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414l16.586 16.586h-7.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h14v-14z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 26px; height: 26px; left: 723px; top: 210px;" data-block-id="635c159b7efdcda1df51ffb76f3ccdba"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-down-left" data-shape-fill-color="rgb(234, 153, 153)" data-shape-stretch="true" style="z-index: 28;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(234, 153, 153)"><path d="M18 28c1.105 0 2-0.895 2-2s-0.895-2-2-2h-7.172l16.586-16.586c0.781-0.781 0.781-2.047 0-2.828-0.391-0.391-0.902-0.586-1.414-0.586s-1.024 0.195-1.414 0.586l-16.586 16.586v-7.172c0-1.105-0.895-2-2-2s-2 0.895-2 2v14h14z"></path></g></svg></div></div></section></section><section data-id="14abe36caaf14503def7ff973e2f11cd"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="5a78d35934d338cbd36c71d19167cbe1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="1a8f296f364139cd4b7e78ac1592697a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h1>App Factory</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="bf6ec7e6977575c6dc50858ee763344c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
-<h3>Let’s do some counting and see if there are any patterns.</h3>
+<h3>Let's look at how many steps you take each time the player wins, loses, or draws a game, and see if there are any patterns.</h3>
+
+<h3> </h3>
 
 <h3>If we subtract one number from the other, we can find the number of steps.</h3>
 
@@ -167,7 +344,7 @@
 
 <p> </p>
 
-<h3>In every case of a beat, (Winner – Loser) mod 3 = 1.</h3>
+<h3>In every case of a 'beat', (Winner – Loser) mod 3 = 1.</h3>
 
 <p> </p>
 
@@ -187,7 +364,7 @@
 
 <p> </p>
 
-<h3>In every case of a beaten by, (Loser – Winner) mod 3 = 2.</h3>
+<h3>In every case of a 'beaten by', (Loser – Winner) mod 3 = 2.</h3>
 
 <p> </p>
 
@@ -205,44 +382,55 @@
 </div></div>
 <div class="sl-block" data-block-type="math" style="width: auto; height: auto; min-width: 30px; min-height: 30px; left: 262px; top: 420px;" data-block-id="f271aed6dad991c8e3a8bed52d12a964"><div class="sl-block-content notranslate" style="z-index: 14; font-size: 50%;">
 <div class="math-input">( P - C)\:mod\:3=\begin{cases}0&amp;Draw\\1&amp;Player\:Wins\\2&amp;Computer\:Wins\end{cases}</div>
-<div class="math-output"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>P</mi><mo>−</mo><mi>C</mi><mo>)</mo>&amp;MediumSpace;<mi>m</mi><mi>o</mi><mi>d</mi>&amp;MediumSpace;<mn>3</mn><mo>=</mo><mrow><mo fence="true">{</mo><mtable><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mn>0</mn></mstyle></mtd><mtd><mstyle displaystyle="false" scriptlevel="0"><mrow><mi>D</mi><mi>r</mi><mi>a</mi><mi>w</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mn>1</mn></mstyle></mtd><mtd><mstyle displaystyle="false" scriptlevel="0"><mrow><mi>P</mi><mi>l</mi><mi>a</mi><mi>y</mi><mi>e</mi><mi>r</mi>&amp;MediumSpace;<mi>W</mi><mi>i</mi><mi>n</mi><mi>s</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle displaystyle="false" scriptlevel="0"><mn>2</mn></mstyle></mtd><mtd><mstyle displaystyle="false" scriptlevel="0"><mrow><mi>C</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi>&amp;MediumSpace;<mi>W</mi><mi>i</mi><mi>n</mi><mi>s</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">( P - C)\:mod\:3=\begin{cases}0&amp;amp;Draw\\1&amp;amp;Player\:Wins\\2&amp;amp;Computer\:Wins\end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span style="margin-right: 0.13889em;" class="mord mathit">P</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mord mathit">m</span><span class="mord mathit">o</span><span class="mord mathit">d</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mord">3</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 4.32em; vertical-align: -1.91em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 2.35002em;"><span class="" style="top: -2.19999em;"><span class="pstrut" style="height: 3.15em;"></span><span class="delimsizinginner delim-size4"><span class="">⎩</span></span></span><span class="" style="top: -2.19999em;"><span class="pstrut" style="height: 3.15em;"></span><span class="delimsizinginner delim-size4"><span class="">⎪</span></span></span><span class="" style="top: -3.15001em;"><span class="pstrut" style="height: 3.15em;"></span><span class="delimsizinginner delim-size4"><span class="">⎨</span></span></span><span class="" style="top: -4.30001em;"><span class="pstrut" style="height: 3.15em;"></span><span class="delimsizinginner delim-size4"><span class="">⎪</span></span></span><span class="" style="top: -4.60002em;"><span class="pstrut" style="height: 3.15em;"></span><span class="delimsizinginner delim-size4"><span class="">⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 1.85002em;"><span class=""></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 2.41em;"><span class="" style="top: -4.41em;"><span class="pstrut" style="height: 3.008em;"></span><span class="mord"><span class="mord">0</span></span></span><span class="" style="top: -2.97em;"><span class="pstrut" style="height: 3.008em;"></span><span class="mord"><span class="mord">1</span></span></span><span class="" style="top: -1.53em;"><span class="pstrut" style="height: 3.008em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 1.91em;"><span class=""></span></span></span></span></span><span class="arraycolsep" style="width: 1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 2.41em;"><span class="" style="top: -4.41em;"><span class="pstrut" style="height: 3.008em;"></span><span class="mord"><span style="margin-right: 0.02778em;" class="mord mathit">D</span><span style="margin-right: 0.02778em;" class="mord mathit">r</span><span class="mord mathit">a</span><span style="margin-right: 0.02691em;" class="mord mathit">w</span></span></span><span class="" style="top: -2.97em;"><span class="pstrut" style="height: 3.008em;"></span><span class="mord"><span style="margin-right: 0.13889em;" class="mord mathit">P</span><span style="margin-right: 0.01968em;" class="mord mathit">l</span><span class="mord mathit">a</span><span style="margin-right: 0.03588em;" class="mord mathit">y</span><span class="mord mathit">e</span><span style="margin-right: 0.02778em;" class="mord mathit">r</span><span class="mspace" style="margin-right: 0.222222em;"></span><span style="margin-right: 0.13889em;" class="mord mathit">W</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit">s</span></span></span><span class="" style="top: -1.53em;"><span class="pstrut" style="height: 3.008em;"></span><span class="mord"><span style="margin-right: 0.07153em;" class="mord mathit">C</span><span class="mord mathit">o</span><span class="mord mathit">m</span><span class="mord mathit">p</span><span class="mord mathit">u</span><span class="mord mathit">t</span><span class="mord mathit">e</span><span style="margin-right: 0.02778em;" class="mord mathit">r</span><span class="mspace" style="margin-right: 0.222222em;"></span><span style="margin-right: 0.13889em;" class="mord mathit">W</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 1.91em;"><span class=""></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></div>
-</div></div></section><section data-id="c14cfff030d3688bbad750a4b6df7f1f"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="c664668cf6f05902850497803a2f1966"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="2ff1f15ff93e8d62cdb760ec0309d821"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+
+</div></div></section><section data-id="8dddcc5d8466ebe6ecbae3da08803521"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="d525f28cde0133d8fb96334b7a896051"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="abd7688ff16164647dd729b95584efa7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h1>App Factory</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="8605b9113115ec2661fdd1a783431758"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
-<h3 style="text-align:left">Let's calculate the steps when we call findWinner. Click the cog on the findWinner procedure and drag over input, so findWinner knows it's going to be sent a number and has a variable name to keep track of it with. The default name is 'x', but let's change that to 'steps'.</h3>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 428px;" data-block-id="4fc9fcf2033e902e271622f929c864ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 70%;">
+<h3>Now we can send findWinner the number of steps, and find the winner from there.</h3>
 </div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 327px; height: 162px; left: 317px; top: 420px;" data-block-id="d083011507a9cdc49a9a92b910beb19e"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="327" data-natural-height="162" data-src="find-modulo/b13dfdffa9c1432aa102cf6bad03ff2e.png"></div></div></section><section data-id="8dddcc5d8466ebe6ecbae3da08803521"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="d525f28cde0133d8fb96334b7a896051"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="abd7688ff16164647dd729b95584efa7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 573px; height: 108px; left: 194px; top: 296px;" data-block-id="2fb2a3cfb08d158070a959fed7e0123a"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="573" data-natural-height="108" data-lazy-loaded="" data-src="find-modulo/bb1f75c72d1192328d168fc15f2b4eb8.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="f95fc46509fdf54d21a9db8c79aa324a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left; font-size: 70%;">
+<h3>Modulo is so useful, it's built in to app inventor. Drag it out of the Math drawer and build the modulo calculation. It looks like this.</h3>
+</div></div></section><section data-id="c14cfff030d3688bbad750a4b6df7f1f"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="c664668cf6f05902850497803a2f1966"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="2ff1f15ff93e8d62cdb760ec0309d821"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h1>App Factory</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="4fc9fcf2033e902e271622f929c864ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
-<h3>Now we can send findWinner our number of steps. Modulo is so useful, it's built in to app inventor. Drag it out of the Math drawer and build the modulo calculation. There will be a space for it where you call findWinner at the bottom of computerChooser.</h3>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="8605b9113115ec2661fdd1a783431758"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 70%;">
+<h3 style="text-align:left">Click the cog on the findWinner procedure and drag over input, so findWinner knows it's going to be sent a number and has a variable name to keep track of it with. The default name is 'x', but let's change that to 'steps'.</h3>
 </div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 773px; height: 108px; left: 94px; top: 420px;" data-block-id="647746e6358b7e165c2c0b35f9216bcd"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="773" data-natural-height="108" data-src="find-modulo/2f58832b1a73c97f0a89eddabb0f9a93.png"></div></div></section><section data-id="51971b188b85fd6d9635d8989fe7f271"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="072f073b0bb2027b57d5be86ba180021"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 327px; height: 162px; left: 317px; top: 333px;" data-block-id="d083011507a9cdc49a9a92b910beb19e"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="327" data-natural-height="162" data-lazy-loaded="" data-src="find-modulo/b13dfdffa9c1432aa102cf6bad03ff2e.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 773px; height: 108px; left: 94px; top: 592px;" data-block-id="96ff588235cddec0797e5da4ba50bcc1"><div class="sl-block-content" style="z-index: 15; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="773" data-natural-height="108" data-lazy-loaded="" data-src="find-modulo/2f58832b1a73c97f0a89eddabb0f9a93.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 959px; left: 1px; top: 508px;" data-block-id="315dd8c638e6a17c06bd964330c6f336"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 70%;">
+<h3 style="text-align:left">Now you can attach the modulo blocks to the call findWinner block - there's a new space for the number of steps.</h3>
+</div></div></section><section data-id="51971b188b85fd6d9635d8989fe7f271"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="072f073b0bb2027b57d5be86ba180021"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="b1ea94c3e8f56b14feb018dbdf926ac5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h1>App Factory</h1>
 </div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 426px; height: 213px; left: 267px; top: 280px;" data-block-id="e8521fcd522cbe0abefa516a5ec45aec"><div class="sl-block-content" style="z-index: 12; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="426" data-natural-height="213" data-src="find-modulo/cc5569838711eb1c456dc9037f43ca6d.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 426px; height: 213px; left: 267px; top: 280px;" data-block-id="e8521fcd522cbe0abefa516a5ec45aec"><div class="sl-block-content" style="z-index: 12; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="426" data-natural-height="213" data-lazy-loaded="" data-src="find-modulo/cc5569838711eb1c456dc9037f43ca6d.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="433b9f4b785b8fa2b7f7734a463fb76c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
 <h3>We know that if there are no steps, it's a draw, so we can represent that like this.</h3>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 543px;" data-block-id="6f6b68f75838d7df6bff87d2963389f3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left; font-size: 70%;">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 525px;" data-block-id="6f6b68f75838d7df6bff87d2963389f3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: left; font-size: 70%;">
 <h3>Can you fill in the rest of the procedure?</h3>
-</div></div></section><section data-id="82cb06f6e32319d323b744145988b39d"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="61d4e823d52a4ca68404a36579f3ace8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="daa43bd2bf52998b844c0f31748a40df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+</div></div></section><section data-id="82cb06f6e32319d323b744145988b39d"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="61d4e823d52a4ca68404a36579f3ace8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Finding the winner with modulo</h2></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="daa43bd2bf52998b844c0f31748a40df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h1>App Factory</h1>
 </div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 457px; height: 234px; left: 252px; top: 210px;" data-block-id="53aa3ebc0b99e1dec9165c0e842c8820"><div class="sl-block-content" style="z-index: 13; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="457" data-natural-height="234" data-src="find-modulo/00576bb9790e41417c96b5e6f230e9ea.png"></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 490px;" data-block-id="52aa1c882fa78e61de869641ad1933f6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%;">
-<h3>Here's our finished procedure. Much better!</h3>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 475px; height: 243px; left: 483px; top: 328px;" data-block-id="53aa3ebc0b99e1dec9165c0e842c8820"><div class="sl-block-content" style="z-index: 12; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="457" data-natural-height="234" data-lazy-loaded="" data-src="find-modulo/00576bb9790e41417c96b5e6f230e9ea.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 475px; left: 483px; top: 210px;" data-block-id="52aa1c882fa78e61de869641ad1933f6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%; text-align: left;">
+<h3>And here's our finished procedure. Much better! A lot shorter, and no repetition.</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 420px; height: 449px; left: 0px; top: 251px;" data-block-id="62712c9d0ddae5396b41fe66ee2a1165"><div class="sl-block-content" style="z-index: 15; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="531" data-natural-height="568" data-lazy-loaded="" data-src="find-modulo/30b5920e4125886d2198a02d51260a8c.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 414px; left: 0px; top: 210px;" data-block-id="2f45a177d6ae83b95935864ad180d110"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 70%; text-align: left;">
+<h3>Here's the old procedure...</h3>
 </div></div></section>
 			</div>
 		</div>
 
 		<script>
-			var SLConfig = {"deck": {"id":1435485,"slug":"find-modulo","title":"Finding the winner with modulo","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/33b8e63049b3fd3a119f4856b548c098/thumb.jpg?1550577643","view_count":0,"user":{"id":970977,"username":"cq2019","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/ef7bc22240b52e4dee7641e7a9b361e8?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":2326984,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"concave","theme_id":null,"theme_font":"sketch","theme_color":"sky-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":13,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1550580305517,"font_typekit":null,"font_google":null,"notes":{}}};
+			var SLConfig = {"deck": {"id":1435485,"slug":"find-modulo","title":"Finding the winner with modulo","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/33b8e63049b3fd3a119f4856b548c098/thumb.jpg?1550758666","view_count":0,"user":{"id":970977,"username":"cq2019","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/ef7bc22240b52e4dee7641e7a9b361e8?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":2326984,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"concave","theme_id":null,"theme_font":"sketch","theme_color":"sky-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":18,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1550850620618,"font_typekit":null,"font_google":null,"notes":{}}};
 
 
 			// Use local fonts
@@ -287,10 +475,7 @@
 			});
 		</script>
 
-		<a href="../index.html#/1">
-				<div class="navbar">
-				</div>
-		</a>
-		
+				<a href="../index.html#/1"><div class="navbar"></div></a>
+
 	</body>
 </html>

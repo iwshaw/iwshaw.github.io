@@ -9,22 +9,45 @@
 
 		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
 
-		<link rel="stylesheet" type="text/css" href="../lib/backtomenu.css">
+
 
 	</head>
 	<body class="reveal-viewport theme-font-sketch theme-color-sky-blue">
 		<div class="reveal">
 			<div class="slides">
-				<section data-id="f8d21bd20ad6056516f8babda7536eb6"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="9c6519bb1cd0e5b60e02d5087b70e56e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; font-size: 120%;">
+				<section data-id="ed348b89f8841a67d171a4289bb66921"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 98px;" data-block-id="b0bdc3f1684465a912c2d2da1fcd05e7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h2>Adding a scoreboard<br>
+</h2></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="e59cb91ef85c67f2688ede0b637df9a5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>App Factory</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 240px; top: 210px;" data-block-id="fe541c29f3afc17d56742d07f713c86e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 70%;">
+<h3>In this challenge you will:</h3>
+
+<ul>
+	<li>
+	<h3>use variables to keep score</h3>
+	</li>
+	<li>
+	<h3>update the score with block coding</h3>
+	</li>
+	<li>
+	<h3>detect and declare a winner using conditionals</h3>
+	</li>
+	<li>
+	<h3>use procedures to make your code easy to update and change</h3>
+	</li>
+	<li>
+	<h3>add a reset button to play again</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="f8d21bd20ad6056516f8babda7536eb6"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="9c6519bb1cd0e5b60e02d5087b70e56e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; font-size: 120%;">
 <h1>App Factory</h1>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 117px;" data-block-id="dae0c40e83282b0f85a881d0294eeb29"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h2>Adding a scoreboard</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="dc0d9955d0dfde09b041b326814ef939"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
-<h3 style="text-align:left">It would be good if the game kept score, and declared an overall winner - first to five, say.</h3>
-
-<h3 style="text-align:left">On the designer tab, we will need a label to tell the player the scores.</h3>
+<h3 style="text-align:left">Let's add a scoreboard. We will need to add variables that keep score, a procedure for updating the variables, and display elements so the user can keep track.</h3>
 </div></div>
 <div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 611px; height: 313px; left: 349px; top: 350px;" data-block-id="b94f6f91fa298f69b56cf38b1485e44f"><div class="sl-block-content" style="z-index: 14; border-style: dashed; border-width: 4px; border-radius: 20px;"><img style="" data-natural-width="631" data-natural-height="323" data-lazy-loaded="" data-src="appfactory-scoreboard/8202b3a96aea4bd7979904364de41c3f.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 335px; left: 0px; top: 350px;" data-block-id="6c7b70d07cd270c31003e01332b4eb4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 70%;">
@@ -197,7 +220,11 @@
 
 <h3 style="text-align:left"> </h3>
 
-<h3 style="text-align:left">Let's make sure the game stops when someone has won. We can turn off the buttons using their 'Enabled' property. Try it in the Designer editor - you will see the button go grey and stop working.</h3>
+<h3 style="text-align:left">Let's make sure the game stops when someone has won. We can disable the players buttons so they can't play any more.</h3>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left">Let's do this using the 'Enabled' property of the button component. Try unchecking the 'Enabled' box in the Properties pane of the Designer editor - you will see the button go grey and stop working on the phone.</h3>
 
 <h3 style="text-align:left"> </h3>
 
@@ -315,8 +342,16 @@
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="dd3b644788ecaf3ccbc5600dcbff85ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <h1>App Factory</h1>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="cf41fba92d9cfb9b27c9d69941813afa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
-<h3>We'll need to call this procedure so it actually runs. But where is the best place to call it from?</h3>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 206px;" data-block-id="cf41fba92d9cfb9b27c9d69941813afa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 70%;">
+<h3>We'll need to call this procedure so it actually runs. When writing code we want it to be as short and elegant as possible.</h3>
+
+<h3> </h3>
+
+<h3>Where could we call this procedure</h3>
+
+<h3>so we only need to add one extra</h3>
+
+<h3>line?</h3>
 
 <h3> </h3>
 
@@ -327,16 +362,6 @@
 <h3>flows through the logic of the code.</h3>
 
 <h3> </h3>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
 
 <h3>Where will we put the 'call runningScore'? Why is this the best place?</h3>
 </div></div>
@@ -353,6 +378,8 @@
 
 <h3>Perhaps the best place to call it is from the findWinner procedure, at the bottom, outside the if…then block, so it runs every time and runs after the scores have been updated.</h3>
 
+<h3> </h3>
+
 <h3>Add the ‘call runningScore’ block to the findWinner procedure.</h3>
 
 <h3> </h3>
@@ -364,7 +391,7 @@
 		</div>
 
 		<script>
-			var SLConfig = {"deck": {"id":1432437,"slug":"appfactory-scoreboard","title":"App Factory - Scoreboard","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/30efdcfb5ffde2403bd7f6fbf00c86be/thumb.jpg?1550509525","view_count":0,"user":{"id":970977,"username":"cq2019","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/ef7bc22240b52e4dee7641e7a9b361e8?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":2326984,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"concave","theme_id":null,"theme_font":"sketch","theme_color":"sky-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":26,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1550483155343,"font_typekit":null,"font_google":null,"notes":{}}};
+			var SLConfig = {"deck": {"id":1432437,"slug":"appfactory-scoreboard","title":"App Factory - Scoreboard","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/30efdcfb5ffde2403bd7f6fbf00c86be/thumb.jpg?1550756410","view_count":0,"user":{"id":970977,"username":"cq2019","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/ef7bc22240b52e4dee7641e7a9b361e8?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":2326984,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"concave","theme_id":null,"theme_font":"sketch","theme_color":"sky-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":27,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1550756831068,"font_typekit":null,"font_google":null,"notes":{}}};
 
 
 			// Use local fonts
@@ -409,10 +436,7 @@
 			});
 		</script>
 
-		<a href="../index.html#/1">
-				<div class="navbar">
-				</div>
-		</a>
+				<a href="../index.html#/1"><div class="navbar"></div></a>
 
 	</body>
 </html>
