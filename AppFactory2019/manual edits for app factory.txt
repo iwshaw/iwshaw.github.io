@@ -4,9 +4,13 @@ Add backtomenu.css to the folder 'lib'
 In the main index page:
   
   Make the href tags relative
+  Set them to target="_self"
 
 
 In each module index page:
+
+  Add at the top in <head>, by the other css link:
+    <link rel="stylesheet" type="text/css" href="../lib/backtomenu.css">
 
   Add at the bottom of the page before </body>:
     <a href="../index.html#/1"><div class="navbar"></div></a>
