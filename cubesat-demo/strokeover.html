@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Image Comparison Slider</title>
+	<link rel="stylesheet" type="text/css" href="css/strokeover.css">
+	<link rel="stylesheet" type="text/css" href="css/videobg.css">
+</head>
+<body>
+	<video autoplay muted loop id="myVideo">
+	  <source src="video/iss_360p.mp4" type="video/mp4">
+	</video>
+<div class=content>
+	<header>
+		<h1>Image Comparison Scanner</h1>
+	</header>
+		<canvas id=canvas class=cursor width=965 height=550></canvas>
+		<br>
+		<div class=text-below>Scan the image with your cubesat to see the 'after' picture.</div>
+</div>
+
+<script type="text/javascript" src="js/strokeover.js"></script>
+</body>
+</html>
