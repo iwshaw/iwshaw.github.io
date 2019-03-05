@@ -9,9 +9,14 @@ Primary style
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: myCube;
+  src:url(../font/trench100free.ttf);
+}
+
 body {
-  font-size: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-size: 200%;
+  font-family: myCube;
   color: #445b7c;
   background-color: #445b7c;
 }
@@ -32,6 +37,7 @@ img {
 figure {
   border:4px solid green;
   border-radius: 10px;
+  cursor: url(../img/cubesat-trb.png), auto;
 }
 
 /* --------------------------------
@@ -45,7 +51,7 @@ header {
 }
 header h1 {
   font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 3.5rem;
   color: #ffffff;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -53,14 +59,7 @@ header h1 {
 }
 
 @media only screen and (min-width: 768px) {
-  header {
-    height: 240px;
-    line-height: 240px;
-  }
-  header h1 {
-    font-size: 32px;
-    font-size: 2rem;
-  }
+
 }
 
 .cd-image-container {
@@ -78,8 +77,8 @@ header h1 {
   bottom: 0;
   right: 0;
   color: #ffffff;
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 50;
+  font-size: 2.5rem;
   padding: 1em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -185,7 +184,7 @@ header h1 {
   margin-left: -22px;
   margin-top: -22px;
   border-radius: 50%;
-  background: #dc717d url("../img/cd-arrows.svg") no-repeat center center;
+  background: #445b7c url("../img/cd-arrows.svg") no-repeat center center;
   cursor: url(../img/cubesat-trb.png), auto;
   box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   opacity: 0;
@@ -197,7 +196,7 @@ header h1 {
 }
 .cd-handle.draggable {
   /* change background color when element is active */
-  background-color: #445b7c;
+  background-color: #00ff00;
 }
 .is-visible .cd-handle {
   opacity: 1;
