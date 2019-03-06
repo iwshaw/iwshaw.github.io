@@ -7,14 +7,20 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
-	<title>Image Comparison Slider</title>
+	<title>Cubesats</title>
 	<link rel="stylesheet" type="text/css" href="css/videobg.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+
+
+
+
 </head>
 <body>
 	<video autoplay muted loop id="myVideo">
 	  <source src="video/iss_360p.mp4" type="video/mp4">
 	</video>
 <div class=content>
+
 <div class=menu>
 	<img src="img/es-banner.png" width=100%>
 	<br><br>
@@ -30,10 +36,20 @@
 	<br>
 	<p>What do you think happened here?</p>
 	<br>
-  <a href="slideover.html" class="menu-button">Next Page</a>
+
+	<!-- Trigger/Open The Modal -->
+	For the answer,<br>
+ <span id="myBtn" class=myBtn>Click here!</span>
+
+
+ </div>
+
 </div>
 </div>
 <div class=content style="margin-left:10%">
+
+
+
 	<header>
 		<h1>Image Comparison Scanner</h1>
 		<br>
@@ -50,10 +66,31 @@
 		<span class="cd-handle"></span>
 	</figure> <!-- cd-image-container -->
 	<br>
-	<div class=text-below>Move the slider with your cubesat to see the 'after' picture.</div>
+	<div class=text-below>Move the slider with your cubesat to see the 'after' picture.
+		<br>
+		<a href="slideover.html" class="menu-button">Next Page</a>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>
+				The images were taken in November 2018.
+				The show the damage done by wildfires in America, near Los Angeles.
+				The fires burned for nearly two weeks and destroyed over 1,000 buildings.
+				More than 1,800 firefighters worked on controlling the blaze.
+				The fire spread due to dry brush and powerful winds from Santa Ana.
+			</p>
+		</div>
+
+
 </div>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/modal.js"></script> <!-- Modernizr -->
 </body>
 </html>
