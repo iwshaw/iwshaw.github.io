@@ -34,10 +34,27 @@ img {
   text-align:center;
 }
 
+.cursor{
+  cursor: url(../img/cubesat-trb.png), auto;
+}
+
+
 figure {
   border:4px solid green;
   border-radius: 10px;
   cursor: url(../img/cubesat-trb.png), auto;
+}
+
+.menu {
+  width:22%;
+}
+
+.menu a {
+  float:left;
+}
+
+ul {
+  list-style-type: square;
 }
 
 /* --------------------------------
@@ -80,6 +97,7 @@ header h1 {
   font-size: 50;
   font-size: 2.5rem;
   padding: 1em;
+  text-shadow: 2px 2px #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 0;

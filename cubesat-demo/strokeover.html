@@ -3,9 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -19,13 +16,32 @@
 	  <source src="video/iss_360p.mp4" type="video/mp4">
 	</video>
 <div class=content>
+<div class=menu>
+	<img src="img/es-banner.png" width=100%>
+	<br><br>
+	<p>Scan the image with your cubesat to see the 'after' picture.</p>
+	<br>
+	<p>Can you find:</p>
+	<ul>
+  <li>Undamaged houses?</li>
+	<li>Damaged houses?</li>
+  </ul>
+	<br>
+	<p>What about the trees?</p>
+	<br>
+	<p>What do you think happened here?</p>
+	<br>
+  <a href="slideover.html" class="menu-button">Next Page</a>
+</div>
+</div>
+<div class=content style="margin-left:10%">
 	<header>
 		<h1>Image Comparison Scanner</h1>
 		<br>
 	</header>
 		<canvas id=canvas class=cursor width=965 height=550></canvas>
 		<br>
-		<div class=text-below>Scan the image with your cubesat to see the 'after' picture.</div>
+		<div class=text-below></div>
 </div>
 
 <script type="text/javascript" src="js/strokeover.js"></script>
