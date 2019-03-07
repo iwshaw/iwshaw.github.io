@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Cubesats</title>
+	<link rel="stylesheet" type="text/css" href="css/videobg.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+
+
+
+
+</head>
+<body>
+	<video autoplay muted loop id="myVideo">
+	  <source src="video/iss_360p.mp4" type="video/mp4">
+	</video>
+<div class=content>
+
+<div class=menu>
+	<img src="img/es-banner.png" width=100%>
+	<br><br>
+	<p>Scan the image with your cubesat to see the 'after' picture.</p>
+	<br>
+	<p>What is this?</p>
+	<br>
+	<p>The images are only a month apart. What happened?</p>
+	<br>
+	<!-- Trigger/Open The Modal -->
+	For the answer,<br>
+ <span id="myBtn" class=myBtn>Click here!</span>
+
+
+ </div>
+
+</div>
+</div>
+<div class=content style="margin-left:10%">
+
+
+
+	<header>
+		<h1>Image Comparison Scanner</h1>
+		<br>
+	</header>
+		<figure class="cd-image-container">
+			<img src="img/NASA 2_Ethiopia_Volcano_02112017-2048px-80-after.jpg" alt="Modified Image">
+			<span class="cd-image-label" data-type="original">After</span>
+
+		<div class="cd-resize-img"> <!-- the resizable image on top -->
+			<img src="img/NASA 1_Ethiopia_Volcano_01102017-2048px-80-before.jpg" alt="Original Image">
+			<span class="cd-image-label" data-type="modified">Before</span>
+		</div>
+
+		<span class="cd-handle"></span>
+	</figure> <!-- cd-image-container -->
+	<br>
+	<div class=text-below>Move the slider with your cubesat to see the 'after' picture.
+		<br>
+		<a href="page4.html" class="menu-button">Next Page</a>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>These images come from a volcano in northern Ethiopia called Erta Ale.</p>
+			<p>Translated into “smoking mountain” with a vent called “the gateway to hell,” Erta Ale oozed a lava lake on Jan. 10, and released its trapped volcanic gasses on Feb. 11.</p>
+			<p>Other hot spots were detected on the southeastern slope of the volcano, as shown in the Feb. 11 image.</p>
+			<p>The satellite’s shortwave infrared (SWIR) signal can see increased temperatures where new lava is either very shallow, or gurgling up to the surface.</p>
+			<span class="modal-credits">Images: NASA</span>
+		</div>
+
+</div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/modal.js"></script> <!-- Modernizr -->
+</body>
+</html>

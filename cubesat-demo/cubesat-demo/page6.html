@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Cubesats</title>
+	<link rel="stylesheet" type="text/css" href="css/videobg.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+
+
+
+
+</head>
+<body>
+	<video autoplay muted loop id="myVideo">
+	  <source src="video/iss_360p.mp4" type="video/mp4">
+	</video>
+<div class=content>
+
+<div class=menu>
+	<img src="img/es-banner.png" width=100%>
+	<br><br>
+	<p>Scan the image with your cubesat to see the 'after' picture.</p>
+	<br>
+	<p>This is also a false colour image.</p>
+	<ul>
+  <li>What geographical feature is this?</li>
+	<li>How has it changed?</li>
+  </ul>
+	<br>
+	<p>People caused this change deliberately. How, and why?</p>
+	<br>
+	<!-- Trigger/Open The Modal -->
+	For the answer,<br>
+ <span id="myBtn" class=myBtn>Click here!</span>
+
+
+ </div>
+
+</div>
+</div>
+<div class=content style="margin-left:10%">
+
+
+
+	<header>
+		<h1>Image Comparison Scanner</h1>
+		<br>
+	</header>
+		<figure class="cd-image-container">
+			<img src="img/NASA 2_Three_Gorges_Dam_L8_08222016-2048px-95-after.jpg" alt="Modified Image">
+			<span class="cd-image-label" data-type="original">After</span>
+
+		<div class="cd-resize-img"> <!-- the resizable image on top -->
+			<img src="img/NASA 1_Three_Gorges_Dam_LT5_09241993-2048px-90-before.jpg" alt="Original Image">
+			<span class="cd-image-label" data-type="modified">Before</span>
+		</div>
+
+		<span class="cd-handle"></span>
+	</figure> <!-- cd-image-container -->
+	<br>
+	<div class=text-below>Move the slider with your cubesat to see the 'after' picture.
+		<br>
+		<a href="page7.html" class="menu-button">Next Page</a>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>China’s Three Gorges Dam on the Yangtze River became the world’s largest hydroelectric power plant when it was completed in 2012.</p>
+			<p>It has also reduced flooding, helped with river navigation and provided water for irrigation.</p>
+			<p>However, construction forced about 1.2 million people to move house and, according to a 2010 study, triggered about 3,400 earthquakes and many landslides from mid-2003 to 2009.</p>
+			<p>Changes in river flow have raised concerns about the buildup of mud on the river bottom, and loss of different species of wildlife.</p>
+			<p>Important archeological sites and ancient monuments reportedly ended up underwater as the reservoir filled.</p>
+		  <p>Forests appear red in these images to represent measurements by infrared sensors.</p>
+			<span class="modal-credits">Images: NASA</span>
+		</div>
+
+
+</div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/modal.js"></script> <!-- Modernizr -->
+</body>
+</html>
