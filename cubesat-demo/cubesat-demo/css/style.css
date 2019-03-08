@@ -53,6 +53,16 @@ figure {
   float:left;
 }
 
+.nav-button-previous {
+  font-size: 0.8em;
+  padding-right:3em;
+}
+
+.nav-button-next {
+  font-size: 0.8em;
+  padding-left:3em;
+}
+
 ul {
   list-style-type: square;
 }
