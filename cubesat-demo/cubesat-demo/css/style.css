@@ -11,7 +11,7 @@ Primary style
 
 @font-face {
   font-family: myCube;
-  src:url(../font/trench100free.ttf);
+  src:url(../font/SSCR.TTF);
 }
 
 body {
@@ -23,30 +23,57 @@ body {
 }
 
 a {
-  color: green;
+  color: chartreuse;;
+}
+
+.myBtn {
+  color: chartreuse;
+  text-decoration: underline;
 }
 
 img {
   max-width: 100%;
 }
 
+img.geo {
+  border:4px solid slategrey;
+  border-radius: 10px;
+  float:left;
+  margin: 0 20px 20px 0;
+}
+
 .text-below {
   text-align:center;
 }
 
+p.subtitle {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+/*
 .cursor{
   cursor: url(../img/cubesat-trb.png), auto;
 }
+*/
 
+.content {
+  position: fixed;
+  margin-left:12%;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
 
 figure {
-  border:4px solid green;
+  border:4px solid chartreuse;
   border-radius: 10px;
-  cursor: url(../img/cubesat-trb.png), auto;
+  cursor: url(../img/cubesat-trb.png) 19 21 , auto;
 }
 
 .menu {
   width:22%;
+  margin-left: -11%;
 }
 
 .menu a {
@@ -55,16 +82,20 @@ figure {
 
 .nav-button-previous {
   font-size: 0.8em;
-  padding-right:3em;
+  float:left;
+  padding-left: 7em;
+  padding-top:0.25em;
 }
 
 .nav-button-next {
   font-size: 0.8em;
-  padding-left:3em;
+  float:right;
+  padding-right:7em;
+  padding-top:0.25em;
 }
 
 ul {
-  list-style-type: square;
+  list-style-type:square;
 }
 
 /* --------------------------------
@@ -76,9 +107,10 @@ header {
   position: relative;
   text-align: center;
 }
+
 header h1 {
-  font-size: 22px;
-  font-size: 3.5rem;
+  font-size: 20px;
+  font-size: 3.2rem;
   color: #ffffff;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -95,6 +127,7 @@ header h1 {
   max-width: 965px;
   margin: 0em auto;
 }
+
 .cd-image-container img {
   display: block;
 }
@@ -103,7 +136,9 @@ header h1 {
   position: absolute;
   bottom: 0;
   right: 0;
-  color: #ffffff;
+  color: white;
+  background-color: rgba(0,0,0,0.25);
+  border-radius:10px;
   font-size: 50;
   font-size: 2.5rem;
   padding: 1em;
@@ -119,9 +154,16 @@ header h1 {
   -moz-transition: -moz-transform 0.3s 0.7s, opacity 0.3s 0.7s;
   transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
 }
+
+.cd-image-subtitle {
+  font-size: 1.5rem;
+  display: block;
+}
+
 .cd-image-label.is-hidden {
   visibility: hidden;
 }
+
 .is-visible .cd-image-label {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -147,6 +189,7 @@ header h1 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
 .cd-resize-img img {
   position: absolute;
   left: 0;
@@ -156,10 +199,12 @@ header h1 {
   width: auto;
   max-width: none;
 }
+
 .cd-resize-img .cd-image-label {
   right: auto;
   left: 0;
 }
+
 .is-visible .cd-resize-img {
   width: 50%;
   /* bounce in animation of the modified image */
@@ -201,19 +246,21 @@ header h1 {
     width: 50%;
   }
 }
+
 .cd-handle {
   position: absolute;
-  height: 44px;
-  width: 44px;
+  height: 60px;
+  width: 60px;
   /* center the element */
   left: 50%;
   top: 50%;
-  margin-left: -22px;
-  margin-top: -22px;
+  margin-left: -30px;
+  margin-top: -30px;
   border-radius: 50%;
-  background: #445b7c url("../img/cd-arrows.svg") no-repeat center center;
-  cursor: url(../img/cubesat-trb.png), auto;
-  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: url("../img/cd-arrows.svg") no-repeat center center;
+  background-color: rgba(127,255,0,0.2);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   opacity: 0;
   -webkit-transform: translate3d(0, 0, 0) scale(0);
   -moz-transform: translate3d(0, 0, 0) scale(0);
@@ -223,7 +270,7 @@ header h1 {
 }
 .cd-handle.draggable {
   /* change background color when element is active */
-  background-color: #00ff00;
+  background-color: rgba(127,255,0,0.6);
 }
 .is-visible .cd-handle {
   opacity: 1;
