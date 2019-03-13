@@ -23,3 +23,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// for the follow effect
+$(document).on('mousemove', function(e){
+  $("#follow-image").css({
+    left:e.pageX,
+    top:e.pageY
+  });
+});

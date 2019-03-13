@@ -40,6 +40,15 @@ img.geo {
   border-radius: 10px;
   float:left;
   margin: 0 20px 20px 0;
+  max-width: 50%;
+}
+
+img.geo-right {
+  border:4px solid slategrey;
+  border-radius: 10px;
+  float:right;
+  margin: 0 20px 20px 0;
+  max-width: 50%;
 }
 
 .text-below {
@@ -74,6 +83,7 @@ figure {
 .menu {
   width:22%;
   margin-left: -11%;
+  font-size: 0.8em;
 }
 
 .menu a {
@@ -83,19 +93,29 @@ figure {
 .nav-button-previous {
   font-size: 0.8em;
   float:left;
-  padding-left: 7em;
-  padding-top:0.25em;
+  padding-left:7em;
+  padding-top:0.3em;
 }
 
 .nav-button-next {
   font-size: 0.8em;
   float:right;
   padding-right:7em;
-  padding-top:0.25em;
+  padding-top:0.3em;
 }
 
 ul {
   list-style-type:square;
+}
+
+/* --------------------------------
+
+Follow effect
+
+-------------------------------- */
+
+#follow-image {
+position:absolute;
 }
 
 /* --------------------------------
