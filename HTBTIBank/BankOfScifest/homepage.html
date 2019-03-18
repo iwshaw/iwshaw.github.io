@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Bank of Scifest</title>
+  <link rel=stylesheet href="bank.css">
+  <link rel=stylesheet href="toastify.css">
+  <script src="toastify.js"></script>
+</head>
+<body>
+
+<script type="text/javascript"> // inline javascript to complete the y2k vibe lol
+  var username=document.URL.substring(document.URL.indexOf("?")+10,document.URL.indexOf("&"));
+  var password=document.URL.substring(document.URL.indexOf("&")+10,document.URL.length);
+  if (password != "mysupersecretpassword") {
+    alert("Access Denied");
+    window.close();
+  }
+  var balance=119524.13;
+  function currencyFormat(num) {
+    return '&pound;' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
+
+  function newCard() {
+    var myToast = Toastify({
+  	 text: "Sorry, new cards are not being issued at the moment due to hacker activity.<br><br>Have a Nice Day! 😃",
+  	 duration: 4000,
+     gravity: 'bottom',
+     positionLeft: true,
+  	})
+    myToast.showToast();
+  }
+
+  function payBills() {
+    var myToast = Toastify({
+  	 text: "The bill payment system is currently down due to DDoS attacks.<br><br>Have a Nice Day! 😃",
+  	 duration: 4000,
+     gravity: 'bottom',
+     positionLeft: true,
+  	})
+    myToast.showToast();
+  }
+
+  function startTransfer() {
+    document.getElementById('optionsFigure').style.display = 'none';
+    document.getElementById('transferFigure').style.display = 'block';
+  }
+
+  function endTransfer() {
+    var myToast = Toastify({
+     text: "Money transferred.<br><br>Have a Nice Day! 😃",
+     duration: 4000,
+     gravity: 'bottom',
+     positionLeft: true
+    })
+    myToast.showToast();
+    var tAmount = document.getElementById('transferAmount').value;
+    balance = balance - tAmount;
+    formatted_balance = currencyFormat(balance);
+    document.getElementById('optionsFigure').style.display = 'block';
+    document.getElementById('transferFigure').style.display = 'none';
+    document.getElementById('displayBalance').innerHTML = formatted_balance;
+    if (balance < 0) {
+      document.getElementById('displayBalance').style.color = 'red';
+    }
+  }
+
+  function cancelTransaction(){
+    var myToast = Toastify({
+     text: "Transaction Cancelled.<br><br>Have a Nice Day! 😃",
+     duration: 4000,
+     gravity: 'bottom',
+     positionLeft: true
+    })
+    myToast.showToast();
+    document.getElementById('optionsFigure').style.display = 'block';
+    document.getElementById('transferFigure').style.display = 'none';
+  }
+
+  function transferFunds() {
+    var tAmount = document.getElementById('transferAmount').value;
+    if (isNaN(tAmount))
+    {
+      var myToast = Toastify({
+    	 text: "That amount is not a number!",
+    	 duration: 4000,
+       gravity: 'bottom',
+       positionLeft: true,
+    	})
+      myToast.showToast();
+    }
+    else if (tAmount > balance)
+    {
+      var myToast = Toastify({
+    	 text: "You are sending more money than you have deposited. This transfer will overdraw your account and may incur charges.<br><br>Click OK to confirm, or the X at the top left to cancel.<br><br><center><input type=\"button\" value=\"OK\" onclick=\"endTransfer();\">",
+    	 duration: 8000,
+       gravity: 'bottom',
+       positionLeft: true,
+       close: true
+    	})
+      myToast.showToast();
+    }
+    else
+    {
+      endTransfer();
+    }
+  }
+
+  function logOut() {
+    var myToast = Toastify({
+  	 text: "Thank you for banking with the Bank of Scifest.<br><br>Click OK to leave, or the X at the top left to cancel.<br><br>Have a Nice Day! 😃<br><br><center><input type=\"button\" value=\"OK\" onclick=\"javascript:window.close();\">",
+  	 duration: 8000,
+     gravity: 'bottom',
+     positionLeft: true,
+     close: true
+  	})
+    myToast.showToast();
+  }
+
+  var formatted_balance=currencyFormat(balance);
+</script>
+
+<header>
+  <img src="es-banner.png"> Bank of Scifest
+</header>
+<section>
+  <figure>
+    <div id='optionsFigure'>
+      <p class="title">Welcome back, <script type="text/javascript">document.write(username);</script>.</p>
+      <p>Balance: <span id=displayBalance><script type="text/javascript">document.write(formatted_balance);</script></span></p>
+      <br>
+      <input type="submit" value="Click to Order a New Credit Card" class=optionbutton onclick="newCard();">
+      <input type="submit" value="Click to Pay Bills" class=optionbutton onclick="payBills();">
+      <input type="submit" value="Click to Transfer Funds" class=optionbutton onclick="startTransfer();">
+      <input type="submit" value="Click to Logout" class=optionbutton onclick="logOut();">
+    </div>
+    <div id='transferFigure'>
+      <p>Please input the transfer details:</p>
+      <div class=login>
+      <div class=logindetails>
+        <fieldset>
+          <legend>Account Number</legend>
+          <input type="text" class=loginbox>
+        </fieldset>
+      </div>
+      <div class=logindetails>
+        <fieldset>
+          <legend>Sort Code</legend>
+          <input type="text" class=loginbox>
+        </fieldset>
+      </div>
+      <div class=logindetails>
+        <fieldset>
+          <legend>Transfer Amount</legend>
+          <input type="text" id="transferAmount" class=loginbox>
+        </fieldset>
+      </div>
+      <input type="submit" value="Send the Money" class=transactionbutton onclick="transferFunds();">
+      <input type="submit" value="Cancel Transaction" class=transactionbutton onclick="cancelTransaction();">
+    </div>
+    </div>
+  </figure>
+</section>
+
+<script type="text/javascript"> // more javascript lol
+  document.getElementById('transferFigure').style.display = 'none';
+</script>
+</body>
+</html>
