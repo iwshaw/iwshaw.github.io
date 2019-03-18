@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Bank of Scifest</title>
+  <link rel=stylesheet href="bank.css">
+</head>
+<body>
+
+<script type="text/javascript"> // inline javascript to complete the y2k vibe lol
+  var username=document.URL.substring(document.URL.indexOf("?")+10,document.URL.indexOf("&"));
+  var password=document.URL.substring(document.URL.indexOf("&")+10,document.URL.length);
+  var balance=119524.13;
+
+  function currencyFormat(num) {
+    return '&pound;' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
+
+  function newCard() {
+    alert('Sorry, new cards are not being issued at the moment due to hacker activity.\n\nHave a Nice Day! :)')
+  }
+
+  function payBills() {
+    alert('The bill payment system is currently down due to DDoS attacks.\n\nHave a Nice Day! :)')
+  }
+
+  function startTransfer() {
+    document.getElementById('optionsFigure').style.display = 'none';
+    document.getElementById('transferFigure').style.display = 'block';
+  }
+
+  function endTransfer(tAmount) {
+    balance = balance - tAmount;
+    formatted_balance = currencyFormat(balance);
+    document.getElementById('optionsFigure').style.display = 'block';
+    document.getElementById('transferFigure').style.display = 'none';
+    document.getElementById('displayBalance').innerHTML = formatted_balance;
+    if (balance < 0) {
+      document.getElementById('displayBalance').style.color = 'red';
+    }
+  }
+
+  function transferFunds() {
+    var tAmount = document.getElementById('transferAmount').value;
+    if (isNaN(tAmount))
+    {
+      alert('That amount is not a number!');
+    }
+    else if (tAmount > balance)
+    {
+      if (window.confirm('You are sending more money than you have deposited.\n\nThis transfer will overdraw your account and may incur charges.\n\nClick OK to proceed, or cancel to return.'))
+      {
+        endTransfer(tAmount);
+      }
+    }
+    else
+    {
+      endTransfer(tAmount);
+    }
+  }
+
+  function logOut() {
+    if(window.confirm('Thank you for banking with the Bank of Scifest.\n\nClick OK to leave. Have a Nice Day! :)')) {
+      window.close();
+    }
+
+  }
+
+  var formatted_balance=currencyFormat(balance);
+</script>
+
+<header>
+  <img src="es-banner.png"> Bank of Scifest
+</header>
+
+<section>
+  <figure>
+    <div id='optionsFigure'>
+      <p class="title">Welcome back, <script type="text/javascript">document.write(username);</script>.</p>
+      <p>Balance: <span id=displayBalance><script type="text/javascript">document.write(formatted_balance);</script></span></p>
+      <input type="submit" value="Click to Order a New Credit Card" class=optionbutton onclick="newCard();">
+      <input type="submit" value="Click to Pay Bills" class=optionbutton onclick="payBills();">
+      <input type="submit" value="Click to Transfer Funds" class=optionbutton onclick="startTransfer();">
+      <input type="submit" value="Click to Logout" class=optionbutton onclick="logOut();">
+
+
+
+    </div>
+    <div id='transferFigure'>
+      <p>Please input the transfer details:</p>
+      <div class=login>
+      <div class=logindetails>
+        <label>Account Number</label><br>
+        <input type="text">   <br> <br>
+      </div>
+      <div class=logindetails>
+        <label>Sort Code</label><br>
+        <input type="text">   <br> <br>
+      </div>
+      <div class=logindetails>
+        <label>Transfer Amount</label><br>
+        <input type="text" id="transferAmount">   <br>
+      </div>
+      <input type="submit" value="Send the Money" class=loginbutton onclick="transferFunds();">
+    </div>
+    </div>
+  </figure>
+</section>
+
+<script type="text/javascript"> // more javascript lol
+  document.getElementById('transferFigure').style.display = 'none';
+</script>
+</body>
+</html>

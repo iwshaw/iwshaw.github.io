@@ -1,0 +1,68 @@
+@font-face {
+  font-family: myBank;
+  src:url(coolvetica.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+  font-size:200%;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004); /* poor man's antialiasing */
+}
+
+header {
+  background-color: #777;
+  padding: 30px;
+  text-align: center;
+  font-family: myBank;
+  font-size: 275%;
+  color: #3caaa3;
+  text-shadow: 4px 4px 10px rgb(40,40,40);
+  border-bottom: 4px black;
+}
+
+figure {
+  border:4px dotted #2b9b93;
+  width: 40%;
+  margin:20px auto auto auto;
+  padding-bottom:20px;
+}
+
+img {
+  width: 200px;
+}
+
+p {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+input {
+  font-size: 1.2rem;
+}
+
+.login {
+  border:4px solid slategrey;
+  margin:20px;
+  padding:30px;
+
+}
+
+.logindetails {
+  margin: 0 auto;
+  font-size: 70%;
+}
+
+.loginbutton {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.optionbutton {
+  font-size: 1.2rem;
+  margin-left:20px;
+  margin-right:20px;
+  width: 92.5%;
+  padding: 5px;
+}
