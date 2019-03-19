@@ -171,15 +171,12 @@
       window.setTimeout( function() {
       var myToast = Toastify({
     	 text: "50 Gs, Account 1337. Be quick, you never know who's watching...",
-    	 duration: 4000,
+    	 duration: 6000,
        hacker: true,
     	 })
        myToast.showToast();
       }, 6000)
     }
-
-
-
     hacker();
     if (isNaN(tAmount))
     {
@@ -296,7 +293,6 @@
       <input type="submit" value="Click to Logout" class=optionbutton onclick="logOut();">
     </div>
     <div id='transferFigure'>
-<!--      <p>Please input the transfer details:</p> -->
       <div class=login>
       <div class=logindetails>
         <fieldset>
@@ -304,12 +300,6 @@
           <input type="text" id=accountNumber class=loginbox>
         </fieldset>
       </div>
-<!--      <div class=logindetails>
-        <fieldset>
-          <legend>Sort Code</legend>
-          <input type="text" class=loginbox>
-        </fieldset>
-      </div> -->
       <div class=logindetails>
         <fieldset>
           <legend>Transfer Amount</legend>

@@ -45,11 +45,11 @@
       this.options.destination = options.destination; // On-click destination
       this.options.newWindow = options.newWindow || false; // Open destination in new window
       this.options.close = options.close || false; // Show toast close icon
-      this.options.hacker = options.hacker || false; // Show toast close icon
+      this.options.hacker = options.hacker || false; // Change multiple css elements for cheesy hacker mode
       this.options.gravity = options.gravity == "bottom" ? "toastify-bottom" : "toastify-top"; // toast position - top or bottom
       this.options.positionLeft = options.positionLeft || false; // toast position - left or right
       this.options.backgroundColor = options.backgroundColor; // toast background color
-      this.options.fontColor = options.fontColor; // toast background color
+      this.options.fontColor = options.fontColor; // toast font color
       this.options.avatar = options.avatar || ""; // toast position - left or right
       this.options.className = options.className || ""; // additional class names for the toast
 
@@ -89,7 +89,7 @@
       if (this.options.hacker === true) {
         divElement.style.background = "#000";
         divElement.style.color = "#0f0";
-        divElement.style["font-family"] = "myHack";
+        divElement.style["font-family"] = "myHack"; // @font-face set in bank.css
         divElement.style.border = "solid #0f0";
         divElement.style["border-radius"] = "0px";
       }
