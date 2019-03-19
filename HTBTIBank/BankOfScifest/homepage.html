@@ -8,8 +8,7 @@
   <script src="toastify.js"></script>
 </head>
 <body>
-
-<script type="text/javascript"> // inline javascript to complete the y2k vibe lol
+<script type="text/javascript"> // inline javascript to complete the y2k web dev vibe
   var username=document.URL.substring(document.URL.indexOf("?")+10,document.URL.indexOf("&"));
   var password=document.URL.substring(document.URL.indexOf("&")+10,document.URL.length);
   if (password != "mysupersecretpassword") {
@@ -44,6 +43,7 @@
   function startTransfer() {
     document.getElementById('optionsFigure').style.display = 'none';
     document.getElementById('transferFigure').style.display = 'block';
+    hacker();
   }
 
   function endTransfer() {
@@ -54,6 +54,8 @@
      positionLeft: true
     })
     myToast.showToast();
+
+    var aNumber = document.getElementById('accountNumber').value;
     var tAmount = document.getElementById('transferAmount').value;
     balance = balance - tAmount;
     formatted_balance = currencyFormat(balance);
@@ -62,6 +64,33 @@
     document.getElementById('displayBalance').innerHTML = formatted_balance;
     if (balance < 0) {
       document.getElementById('displayBalance').style.color = 'red';
+    }
+    if (tAmount > 50000 && aNumber == 1337 && hackStage < 1337) {
+      window.setTimeout( function() {
+      }, 2000);
+      var myToast = Toastify({
+    	 text: "Checking...",
+    	 duration: 2000,
+       hacker: true,
+    	})
+      myToast.showToast();
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "NOOO! Are you trying to get us both arrested!",
+    	 duration: 2000,
+       hacker: true,
+      })
+      myToast.showToast();
+      }, 4000);
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "I'm out of here. Keep working on it, kid 🙄",
+    	 duration: 4000,
+       hacker: true,
+    	 })
+       myToast.showToast();
+      }, 6000)
+      hackStage = 1337;
     }
   }
 
@@ -79,6 +108,79 @@
 
   function transferFunds() {
     var tAmount = document.getElementById('transferAmount').value;
+    var aNumber = document.getElementById('accountNumber').value;
+    if (tAmount == 50000 && aNumber == 1337 && hackStage < 1337) {
+      window.setTimeout( function() {
+      }, 2000);
+      var myToast = Toastify({
+    	 text: "Checking...",
+    	 duration: 2000,
+       hacker: true,
+    	})
+      myToast.showToast();
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "YES!",
+    	 duration: 1000,
+       hacker: true,
+    	 })
+      myToast.showToast();
+      }, 4000);
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "YES YES YES!",
+    	 duration: 1500,
+       hacker: true,
+    	 })
+      myToast.showToast();
+      }, 5000);
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: username + ", you are ELITE!",
+    	 duration: 3000,
+       hacker: true,
+    	 })
+      myToast.showToast();
+      }, 6500);
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "See you around, kid 😉<br>-=z3r0 coo1=-",
+    	 duration: 4000,
+       hacker: true,
+    	 })
+      myToast.showToast();
+    }, 10500);
+      hackStage = 1337; // lol
+    } else if (tAmount < 50000 && aNumber == 1337 && hackStage < 1337) {
+      window.setTimeout( function() {
+      }, 2000);
+      var myToast = Toastify({
+    	 text: "Checking...",
+    	 duration: 2000,
+       hacker: true,
+    	})
+      myToast.showToast();
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "Pfff. Yer Da sells Avon. 😒",
+    	 duration: 2000,
+       hacker: true,
+      })
+      myToast.showToast();
+      }, 4000);
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "50 Gs, Account 1337. Be quick, you never know who's watching...",
+    	 duration: 4000,
+       hacker: true,
+    	 })
+       myToast.showToast();
+      }, 6000)
+    }
+
+
+
+    hacker();
     if (isNaN(tAmount))
     {
       var myToast = Toastify({
@@ -118,6 +220,65 @@
   }
 
   var formatted_balance=currencyFormat(balance);
+
+  var hackStage = 0;
+  function hacker() {
+    if (hackStage == 0) {
+      var myToast = Toastify({
+    	 text: "Knock knock, " + username,
+    	 duration: 4000,
+       hacker: true,
+    	})
+      myToast.showToast();
+      hackStage++;
+    } else if (hackStage == 1) {
+      var myToast = Toastify({
+    	 text: "Hey " + username + ". You're pretty good. Let's see if you're elite.",
+    	 duration: 4000,
+       hacker: true,
+    	})
+      myToast.showToast();
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "Send &pound;50,000 to Account Number 1337.",
+    	 duration: 6000,
+       hacker: true,
+    	 })
+      myToast.showToast();
+      }, 4000);
+      hackStage++;
+    } else if (hackStage == 2) {
+      hackStage++;
+    } else if (hackStage == 3) {
+      hackStage++;
+    } else if (hackStage == 4) {
+      hackStage++;
+    } else if (hackStage == 5) {
+      hackStage++;
+    } else if (hackStage == 6) {
+      hackStage++;
+    } else if (hackStage == 7) {
+      hackStage++;
+    } else if (hackStage == 8) {
+      var myToast = Toastify({
+    	 text: "Where's my money " + username + "???",
+    	 duration: 4000,
+       hacker: true,
+    	})
+      myToast.showToast();
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "50 GRAND. ACCOUNT 1337. COME ON DUDE",
+    	 duration: 8000,
+       hacker: true,
+    	 })
+      myToast.showToast();
+      }, 4000);
+      hackStage = 5;
+    }
+
+  }
+
 </script>
 
 <header>
@@ -135,20 +296,20 @@
       <input type="submit" value="Click to Logout" class=optionbutton onclick="logOut();">
     </div>
     <div id='transferFigure'>
-      <p>Please input the transfer details:</p>
+<!--      <p>Please input the transfer details:</p> -->
       <div class=login>
       <div class=logindetails>
         <fieldset>
           <legend>Account Number</legend>
-          <input type="text" class=loginbox>
+          <input type="text" id=accountNumber class=loginbox>
         </fieldset>
       </div>
-      <div class=logindetails>
+<!--      <div class=logindetails>
         <fieldset>
           <legend>Sort Code</legend>
           <input type="text" class=loginbox>
         </fieldset>
-      </div>
+      </div> -->
       <div class=logindetails>
         <fieldset>
           <legend>Transfer Amount</legend>
@@ -161,7 +322,6 @@
     </div>
   </figure>
 </section>
-
 <script type="text/javascript"> // more javascript lol
   document.getElementById('transferFigure').style.display = 'none';
 </script>
