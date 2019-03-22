@@ -82,14 +82,14 @@
         divElement.style.background = this.options.backgroundColor;
       }
 
-      if (this.options.fontColor) {
+      if (this.options.fontColor) { // I had to add this - why be able to change bg but not font color? ¯\_(ツ)_/¯
         divElement.style.color = this.options.fontColor;
       }
 
       if (this.options.hacker === true) {
         divElement.style.background = "#000";
         divElement.style.color = "#0f0";
-        divElement.style["font-family"] = "myHack"; // @font-face set in bank.css
+        divElement.style["font-family"] = "myHack"; // @font-face set in bank.css, this is obvs not ideal
         divElement.style.border = "solid #0f0";
         divElement.style["border-radius"] = "0px";
       }

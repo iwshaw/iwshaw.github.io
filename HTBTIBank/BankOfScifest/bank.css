@@ -22,7 +22,9 @@ header {
   text-align: center;
   font-family: myBank;
   font-size: 275%;
-  color: #3caaa3;
+  /* old teal version */
+  /* color: #3caaa3; */
+  color: #5df5ac;
   text-shadow: 4px 4px 10px rgb(40,40,40);
   border-style:solid;
   border-width: 0px 0px 4px 0px;
@@ -34,7 +36,7 @@ legend {
 }
 
 figure {
-  border:4px dotted #2b9b93;
+  border:4px dotted #37ca83;
   width: 40%;
   margin:20px auto auto auto;
   padding-bottom:20px;

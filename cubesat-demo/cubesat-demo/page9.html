@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<title>Cubesats</title>
+	<link rel="stylesheet" type="text/css" href="css/videobg.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+</head>
+<body>
+	<video autoplay muted loop id="myVideo" height="1%" width="1%">
+	  <source src="video/GOES16 GeoColour.mp4" type="video/mp4">
+	</video>
+<div class=content>
+	<div class=menu>
+		<img src="img/es-banner.png">
+		<br>
+		<br>
+		<p>Here you can see weather patterns across North and South America.</p>
+		<br>
+		<p>On the right you can see the coast of Africa. You can't quite see the UK - it would be in the top right.</p>
+		<br>
+		<p>The night time images are too dark for the optical sensor - infrared was used instead to detect the difference between the warmer earth and the chilly clouds.</p>
+		<br>
+ 		<p><span id="myBtn" class=myBtn>Click here</span> to find out more!</p>
+	</div>
+</div>
+<div class=content>
+	<header class=right>
+		<h1>Weather Patterns</h1>
+		<p class="subtitle"></p>&ensp;<a href="page8.html" class="nav-button-previous">Previous Page</a>
+		<a href="end.html" class="nav-button-next">Next Page</a>
+	</header>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<img src="img/.png" class="geo">
+				<p> </p>
+				<p> </p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			<span class="modal-credits">Images: </span>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/modal.js"></script>
+</body>
+</html>

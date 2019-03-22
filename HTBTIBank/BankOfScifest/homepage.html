@@ -8,14 +8,17 @@
   <script src="toastify.js"></script>
 </head>
 <body>
-<script type="text/javascript"> // inline javascript to complete the y2k web dev vibe
+<script type="text/javascript"> // inline javascript like it's 1999
+                                // ***spoilers below*** - you have been advised
   var username=document.URL.substring(document.URL.indexOf("?")+10,document.URL.indexOf("&"));
   var password=document.URL.substring(document.URL.indexOf("&")+10,document.URL.length);
-  if (password != "mysupersecretpassword") {
+  if (!(password == "mysupersecretpassword" || password == "thebestpasswordintheuniverse")) {
     alert("Access Denied");
     window.close();
   }
-  var balance=119524.13;
+
+  var balance=119524.13; // or whatever
+
   function currencyFormat(num) {
     return '&pound;' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
   }
@@ -67,6 +70,7 @@
     }
     if (tAmount > 50000 && aNumber == 1337 && hackStage < 1337) {
       window.setTimeout( function() {
+        // dramatic pause
       }, 2000);
       var myToast = Toastify({
     	 text: "Checking...",
@@ -111,6 +115,7 @@
     var aNumber = document.getElementById('accountNumber').value;
     if (tAmount == 50000 && aNumber == 1337 && hackStage < 1337) {
       window.setTimeout( function() {
+        // dramatic pause
       }, 2000);
       var myToast = Toastify({
     	 text: "Checking...",
@@ -151,8 +156,9 @@
       myToast.showToast();
     }, 10500);
       hackStage = 1337; // lol
-    } else if (tAmount < 50000 && aNumber == 1337 && hackStage < 1337) {
+    } else if (tAmount < 50000 && tAmount > 0 && aNumber == 1337 && hackStage < 1337) {
       window.setTimeout( function() {
+        // dramatic pause
       }, 2000);
       var myToast = Toastify({
     	 text: "Checking...",
@@ -176,6 +182,40 @@
     	 })
        myToast.showToast();
       }, 6000)
+    } else if (tAmount < 0 && aNumber == 1337 && hackStage < 1337) {
+      window.setTimeout( function() {
+      }, 2000);
+      var myToast = Toastify({
+    	 text: "Checking...",
+    	 duration: 2000,
+       hacker: true,
+    	})
+      myToast.showToast();
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "Wh... what?",
+    	 duration: 1000,
+       hacker: true,
+      })
+      myToast.showToast();
+      }, 4000);
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "No! It can't be! But I'm ELITE!",
+    	 duration: 3000,
+       hacker: true,
+      })
+      myToast.showToast();
+      }, 5500);
+      window.setTimeout( function() {
+      var myToast = Toastify({
+    	 text: "Huh. Well. SEE YOU AROUND, KID 😡💀😡💀😡💀😡💀😡💀",
+    	 duration: 6000,
+       hacker: true,
+    	 })
+       myToast.showToast();
+       }, 8500)
+       hackStage = 1337; // lol
     }
     hacker();
     if (isNaN(tAmount))
@@ -244,18 +284,8 @@
       myToast.showToast();
       }, 4000);
       hackStage++;
-    } else if (hackStage == 2) {
-      hackStage++;
-    } else if (hackStage == 3) {
-      hackStage++;
-    } else if (hackStage == 4) {
-      hackStage++;
-    } else if (hackStage == 5) {
-      hackStage++;
-    } else if (hackStage == 6) {
-      hackStage++;
-    } else if (hackStage == 7) {
-      hackStage++;
+    } else if (hackStage > 1 && hackStage < 8) {
+      hackStage++; // let the user click around then give a reminder
     } else if (hackStage == 8) {
       var myToast = Toastify({
     	 text: "Where's my money " + username + "???",
@@ -273,16 +303,14 @@
       }, 4000);
       hackStage = 5;
     }
-
   }
-
 </script>
-
-<header>
-  <img src="es-banner.png"> Bank of Scifest
+<header id=header>
+  <!-- <img src="es-banner.png"> Bank of Scifest -->
+  <img src="EF2.png" id=ef_banner> Scifest Savings
 </header>
 <section>
-  <figure>
+  <figure id=figure>
     <div id='optionsFigure'>
       <p class="title">Welcome back, <script type="text/javascript">document.write(username);</script>.</p>
       <p>Balance: <span id=displayBalance><script type="text/javascript">document.write(formatted_balance);</script></span></p>
@@ -313,7 +341,16 @@
   </figure>
 </section>
 <script type="text/javascript"> // more javascript lol
-  document.getElementById('transferFigure').style.display = 'none';
+    if (password == "thebestpasswordintheuniverse") {
+      var balance=95262.33; // or whatever
+      var formatted_balance = currencyFormat(balance);
+      document.getElementById('header').style.color = "#6e86b0";
+      document.getElementById('header').innerHTML = "<img src=\"EF2.png\" id=ef_banner> Festival Funds";
+      document.getElementById('displayBalance').innerHTML = formatted_balance;
+      document.getElementById('ef_banner').src = "EF3.png";
+      document.getElementById('figure').style.border = '4px dashed #3caaa3';
+    }
+    document.getElementById('transferFigure').style.display = 'none';
 </script>
 </body>
 </html>

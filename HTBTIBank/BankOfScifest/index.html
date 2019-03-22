@@ -7,25 +7,24 @@
 </head>
 <body>
 
-<header>
-  <img src="es-banner.png"> Bank of Scifest
+<header id=header>
+  <img src="EF1.png"> Bank of Scifest
 </header>
 
 <section>
-  <figure>
-    <p class=title>Please log in to continue</p>
+  <figure id=figure>
     <div class=login>
       <form method="get" target="_blank" action="./homepage.html">
         <div class=logindetails>
           <fieldset>
             <legend>Username</legend>
-            <input type="text" name="username" class=loginbox placeholder="type your username here">
+            <input type="text" name="username" class=loginbox placeholder="type your username here" required>
           </fieldset>
         </div>
         <div class=logindetails>
           <fieldset>
             <legend>Password</legend>
-            <input type="text" name="password" class=loginbox placeholder="type your password here">
+            <input type="text" name="password" class=loginbox placeholder="type your password here" required>
           </fieldset>
         </div>
         <input type="submit" value="Click to Login" class=loginbutton>
@@ -33,6 +32,9 @@
     </div>
   </figure>
 </section>
-
+<script type="text/javascript"> // more javascript lol
+    document.getElementById('header').style.color = "#eee";
+    document.getElementById('figure').style.border = '4px solid #ccc';
+</script>
 </body>
 </html>

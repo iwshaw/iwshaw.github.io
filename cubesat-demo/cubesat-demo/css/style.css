@@ -19,7 +19,7 @@ body {
   font-family: myCube;
   color: #445b7c;
   background-color: #000;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #000;
 }
 
 a {
@@ -33,11 +33,11 @@ a {
 
 img {
   max-width: 100%;
+  border-radius: 10px;
 }
 
 img.geo {
   border:4px solid slategrey;
-  border-radius: 10px;
   float:left;
   margin: 0 20px 20px 0;
   max-width: 50%;
@@ -45,7 +45,6 @@ img.geo {
 
 img.geo-right {
   border:4px solid slategrey;
-  border-radius: 10px;
   float:right;
   margin: 0 20px 20px 0;
   max-width: 50%;
@@ -53,6 +52,7 @@ img.geo-right {
 
 .text-below {
   text-align:center;
+  vertical-align: bottom;
   max-width: 965px;
 }
 
@@ -60,11 +60,6 @@ p.subtitle {
   font-size: 0.8em;
   margin-bottom: 10px;
 }
-/*
-.cursor{
-  cursor: url(../img/cubesat-trb.png), auto;
-}
-*/
 
 .content {
   position: fixed;
@@ -76,7 +71,7 @@ p.subtitle {
 }
 
 figure {
-  border:4px solid chartreuse;
+  border: 4px solid chartreuse;
   border-radius: 10px;
   cursor: url(../img/cubesat-trb.png) 19 21 , auto;
 }
@@ -85,6 +80,7 @@ figure {
   width:22%;
   margin-left: -11%;
   font-size: 0.8em;
+  z-index: 2;
 }
 
 .menu a {
@@ -125,6 +121,12 @@ Main components
 header {
   position: relative;
   text-align: center;
+}
+
+header.right {
+  text-align: right;
+  padding-right: 10rem;
+  padding-left: 49.5rem;
 }
 
 header h1 {
