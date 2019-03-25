@@ -103,6 +103,12 @@ ul {
   list-style-type:square;
 }
 
+iframe {
+  border: none;
+  width: 965px;
+  height: 600px;
+}
+
 /* --------------------------------
 
 Follow effect

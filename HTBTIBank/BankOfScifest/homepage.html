@@ -344,8 +344,11 @@
     if (password == "thebestpasswordintheuniverse") {
       var balance=95262.33; // or whatever
       var formatted_balance = currencyFormat(balance);
+      document.body.style.backgroundColor = "#bbb";
       document.getElementById('header').style.color = "#6e86b0";
       document.getElementById('header').innerHTML = "<img src=\"EF2.png\" id=ef_banner> Festival Funds";
+      document.getElementById('header').style.backgroundColor = "white";
+      document.getElementById('header').style["text-shadow"] = "4px 4px 10px rgb(190,190,190)";
       document.getElementById('displayBalance').innerHTML = formatted_balance;
       document.getElementById('ef_banner').src = "EF3.png";
       document.getElementById('figure').style.border = '4px dashed #3caaa3';
