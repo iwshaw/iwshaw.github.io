@@ -12,7 +12,7 @@
 </head>
 <body>
 	<video autoplay muted loop id="myVideo" height="1%" width="1%">
-	  <source src="video/GOES16 GeoColour.mp4" type="video/mp4">
+	  <source src="video/iss_360p.mp4" type="video/mp4">
 	</video>
 <div class=content>
 	<div class=menu>
@@ -27,13 +27,43 @@
 		</p>
 		<br>
 		<p>
-			<a href="page1.html">Start Scanning!</a>
+			Click the cubesat to start scanning!
 		</p>
  </div>
+</div>
+<div class=content>
+	<header>
+	</header>
+	<br>
+	<a href="page1.html">
+	<img src="img/cubesat-big.png" alt="cubesat" style="margin-left:10em;margin-top:30em" class="cubesat">
+	</a>
 </div>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="js/modal.js"></script> <!-- Modernizr -->
+<script src="js/modal.js"></script> <!-- modals -->
+<script>
+ function loopDown(){
+        $(".cubesat").animate({
+            marginTop : 80
+            },
+            500, function() {
+            loopUp();
+        });
+    }
+
+    function loopUp(){
+        $(".cubesat").animate({
+            marginTop : 60
+            },
+            500, function() {
+            loopDown();
+        });
+    }
+
+	loopUp();
+
+</script>
 </body>
 </html>

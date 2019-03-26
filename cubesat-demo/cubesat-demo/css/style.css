@@ -99,6 +99,20 @@ figure {
   padding-top:0.3em;
 }
 
+.nav-button-previous-wind {
+  font-size: 0.8em;
+  float:left;
+  padding-top:0.3em;
+  padding-left:10rem;
+}
+
+.nav-button-next-wind {
+  font-size: 0.8em;
+  float:right;
+  padding-top:0.3em;
+  margin-right:-6rem;
+}
+
 ul {
   list-style-type:square;
 }

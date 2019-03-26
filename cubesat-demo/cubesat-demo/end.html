@@ -28,16 +28,42 @@
 </div>
 <div class=content>
 	<header>
-		<h1>Image Comparison Scanner</h1>
-		<p class="subtitle">Thank you for using the image comparison scanner!</p>
+		<h1>Cubesat Scanner</h1>
+		<p class="subtitle">Thank you for using the cubesat scanner.</p>
+		<p class="subtitle">Now you can make your own cubesats!</p>
 <div>
 	<br>
 	<a href="start.html">Back to the Start Page</a>
 </div>
 </header>
+<a href="start.html">
+<img src="img/cubesat-big.png" alt="cubesat" style="margin-left:10em;margin-top:30em" class="cubesat">
+</a>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="js/modal.js"></script>
+<script>
+ function loopDown(){
+        $(".cubesat").animate({
+            marginTop : 80
+            },
+            500, function() {
+            loopUp();
+        });
+    }
+
+    function loopUp(){
+        $(".cubesat").animate({
+            marginTop : 60
+            },
+            500, function() {
+            loopDown();
+        });
+    }
+
+	loopUp();
+
+</script>
 </body>
 </html>
