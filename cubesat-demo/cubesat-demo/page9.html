@@ -7,13 +7,23 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<title>Cubesats</title>
-	<link rel="stylesheet" type="text/css" href="css/videobg.css">
 	<link rel="stylesheet" type="text/css" href="css/modal.css">
+<style>
+#myVideo {
+	width:900px;
+	height:590px;
+}
+
+.planet-container {
+	position:absolute;
+	left:225px;
+	top:90px;
+	width:908px;
+	height:608px;
+}
+</style>
 </head>
 <body>
-	<video autoplay muted loop id="myVideo" height=1% width=1%>
-	  <source src="video/GOES16GeoColourSMALL.mp4" type="video/mp4">
-	</video>
 <div class=content>
 	<div class=menu>
 		<img src="img/es-banner.png">
@@ -31,11 +41,18 @@
 	</div>
 </div>
 <div class=content>
-	<header class=right>
+	<header>
 		<h1>Weather Patterns</h1>
+	</header>
+	<figure class="planet-container">
+		<video autoplay muted loop id="myVideo">
+		  <source src="video/GOES16GeoColourSMALL.mp4" type="video/mp4">
+		</video>
+		<div class=text-below>
 		<p class="subtitle"></p>&ensp;<a href="page8.html" class="nav-button-previous">Previous Page</a>
 		<a href="page10.html" class="nav-button-next">Next Page</a>
-	</header>
+	</div>
+	</figure>
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 		<!-- Modal content -->

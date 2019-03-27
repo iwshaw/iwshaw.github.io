@@ -44,15 +44,15 @@
 
 #city-display {
 	position: absolute;
-	left: 180px;
-	top: 80px;
+	left: 0px;
+	top: 0px;
 	z-index: 20;
 }
 
 #display {
 	position: absolute;
-	left: 180px;
-	top: 80px;
+	left: 0px;
+	top: 0px;
 }
 
 #day {
@@ -96,8 +96,8 @@
 #mask-holder {
 	position: absolute;
 	overflow: hidden;
-	left: 180px;
-	top: 80px;
+	left: 0px;
+	top: 0px;
 	width: 900px;
 	height: 600px;
 }
@@ -122,6 +122,14 @@
 	z-index: 20;
 }
 
+.canvas-figure{
+	position:absolute;
+	left:225px;
+	top:90px;
+	width:908px;
+	height:608px;
+}
+
 </style>
 
 </head>
@@ -132,10 +140,6 @@
 <div class=content>
 	<div class=menu>
 		<img src="img/es-banner.png">
-<!--		<div  id="map-data">
-			<span id="update-time"></span><br><br>
-			<span id="average-speed"></span>
-		</div> -->
 		<br><br>
 		<p>Satellites can detect wind patterns using a technology called LIDAR.</p>
 		<br>
@@ -152,6 +156,7 @@
 	<header>
 		<h1>Wind Patterns</h1>
 	</header>
+	<figure class="canvas-figure">
 	<canvas id="display" width=900 height=600 unselectable="on" class="unselectable" style="opacity:0.6;">
 	    If the map is missing, we recommend the latest
 		<a href="http://www.google.com/chrome">Chrome</a> browser.
@@ -163,9 +168,10 @@
 	    <img alt="mask" id="mask" src="img/us-mask-greenoutline.png" unselectable="on" class="unselectable">
 	  </div>
 		<div class=text-below style="vertical-align: bottom;">
-			<a href="page9.html" class="nav-button-previous-wind">Previous Page</a>
-			<a href="page11.html" class="nav-button-next-wind">Next Page</a><br>
+			<a href="page9.html" class="nav-button-previous">Previous Page</a>
+			<a href="page11.html" class="nav-button-next">Next Page</a><br>
 		</div>
+	</figure>
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 		<!-- Modal content -->
