@@ -7,58 +7,65 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<title>Cubesats</title>
-	<link rel="stylesheet" type="text/css" href="css/videobg.css">
 	<link rel="stylesheet" type="text/css" href="css/modal.css">
+<style>
+#myVideo {
+	width:900px;
+	height:590px;
+}
+
+.planet-container {
+	position:absolute;
+	left:225px;
+	top:90px;
+	width:908px;
+	height:608px;
+}
+</style>
 </head>
 <body>
-	<video autoplay muted loop id="myVideo">
-	  <source src="video/iss_360p.mp4" type="video/mp4">
-	</video>
 <div class=content>
-<div class=menu>
-	<img src="img/es-banner.png">
-	<br><br>
-	<p>This is a glacier on an island in the Atlantic Ocean.</p>
-	<br>
-	<p>What has changed? Why?</p>
-  <br>
-	<p>How long do you think this took?</p>
-	<br>
- 	<p><span id="myBtn" class=myBtn>Click here</span> to find out more!</p>
- </div>
+	<div class=menu>
+		<img src="img/es-banner.png">
+		<br>
+		<br>
+		<p>Here you can see weather patterns across North and South America, day and night.</p>
+		<br>
+		<p>On the right you can see the coast of Africa. You can't quite see the UK - it would be in the top right.</p>
+		<br>
+<!--		<p>The night time images are too dark for the optical sensor - infrared was used instead to detect the difference between the warmer earth and the chilly clouds.</p>
+		<br> -->
+		<!--
+		<p><span id="myBtn" class=myBtn>Click here</span> to find out more!</p>
+		-->
+	</div>
 </div>
 <div class=content>
 	<header>
-		<h1>Image Comparison Scanner</h1>
-		<p class="subtitle">Move the slider with your cubesat to compare the pictures.</p>
+		<h1>Weather Patterns</h1>
 	</header>
-		<figure class="cd-image-container">
-			<img src="img/NASA 2_neumayer_oli_2016258_lrg_ioc.jpg" alt="Modified Image">
-			<span class="cd-image-label" data-type="original">After<span class="cd-image-subtitle">&ensp;????????????</span></span>
-		<div class="cd-resize-img"> <!-- the resizable image on top -->
-			<img src="img/NASA 1_sgeorgiais_ali_11jan05_crop_ioc.jpg" alt="Original Image">
-			<span class="cd-image-label" data-type="modified">Before<span class="cd-image-subtitle">&ensp;????????????</span></span>
-		</div>
-		<span class="cd-handle"></span>
-	<div class=text-below>
-		<a href="page4.html" class="nav-button-previous">Previous Page</a>
+	<figure class="planet-container">
+		<video autoplay muted loop id="myVideo">
+		  <source src="video/GOES16GeoColourSMALL.mp4" type="video/mp4">
+		</video>
+		<div class=text-below>
+		<p class="subtitle"></p>&ensp;<a href="page4.html" class="nav-button-previous">Previous Page</a>
 		<a href="page6.html" class="nav-button-next">Next Page</a>
 	</div>
-</figure> <!-- cd-image-container -->
+	</figure>
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<img src="img/geo5.png" class="geo">
-			<p>Neumayer Glacier is on the east coast of South Georgia, an island 1,200 miles east of South America.</p>
-			<p>It has retreated more than 2.5 miles (4 kilometers) during the past 16 years.</p>
-			<img src="img/neumayer-withscale.gif" class="geo-right">
-			<p>Neumayer flows into the ocean, so even a tiny change in ocean temperature can melt some of the glacier, making it smaller.</p>
-			<span class="modal-credits">Images: NASA</span>
-			<br>
+			<img src="img/.png" class="geo">
+				<p> </p>
+				<p> </p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			<span class="modal-credits">Images: </span>
 		</div>
-</div>
+	</div>
 </div>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
