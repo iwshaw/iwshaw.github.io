@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 
 # set the location of the updates script
-UPDATE=~/Documents/updates.sh
+UPDATE=updates.sh
 
 # get the updates script
-wget -q https://www.cyberquest.info/updates/updates.sh -O UPDATE
+wget -q https://www.cyberquest.info/updates/updates.sh -O $UPDATE
+
+# give it a moment to download
+sleep 3
 
 # make executable
-chmod +x UPDATE
+chmod +x $UPDATE
 
 # run the updates
-cd Documents
-.UPDATE
+./$UPDATE
 
 # delete the updates
-rm UPDATE
+rm $UPDATE
