@@ -142,7 +142,7 @@
       }, 5000);
       window.setTimeout( function() {
       var myToast = Toastify({
-    	 text: username + ", you are ELITE!",
+    	 text: "You are ELITE!",
     	 duration: 3000,
        hacker: true,
     	 })
@@ -263,7 +263,7 @@
   function hacker() {
     if (hackStage == 0) {
       var myToast = Toastify({
-    	 text: "Knock knock, " + username,
+    	 text: "Knock knock",
     	 duration: 4000,
        hacker: true,
     	})
@@ -271,7 +271,7 @@
       hackStage++;
     } else if (hackStage == 1) {
       var myToast = Toastify({
-    	 text: "Hey " + username + ". You're pretty good. Let's see if you're elite.",
+    	 text: "Hey kid. You're pretty good. Let's see if you're elite.",
     	 duration: 4000,
        hacker: true,
     	})
@@ -289,7 +289,7 @@
       hackStage++; // let the user click around then give a reminder
     } else if (hackStage == 8) {
       var myToast = Toastify({
-    	 text: "Where's my money " + username + "???",
+    	 text: "Where's my money???",
     	 duration: 4000,
        hacker: true,
     	})
