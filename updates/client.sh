@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 
+# set the location of the updates script
+UPDATE=~/Documents/updates.sh
+
 # get the updates script
-wget -q http://iwshaw.github.io/updates/updates.sh -O ~/Documents/updates.sh
+wget -q https://www.cyberquest.info/updates/updates.sh -O UPDATE
 
 # make executable
-chmod +x ~/Documents/updates.sh
+chmod +x UPDATE
 
 # run the updates
-.~/Documents/updates.sh
+cd Documents
+.UPDATE
 
 # delete the updates
-rm ~/Documents/updates.sh
+rm UPDATE
